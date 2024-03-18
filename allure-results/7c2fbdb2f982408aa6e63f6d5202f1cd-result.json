@@ -1,0 +1,107 @@
+{
+  "uuid": "dc19754e-ddc1-4842-9829-b4fb2f9f56d3",
+  "historyId": "835208a764bbf308b18beca4aa5cdf70",
+  "testCaseId": "0a05c27caf6f61353750c1dd34af3379",
+  "fullName": "PlayWrightSpecFlow/Features/Login Feature/User should be successfully login",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Login Feature"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "User should be successfully login",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am on the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710739476034,
+      "stop": 1710739482139
+    },
+    {
+      "name": "And  I enter valid \"username\" and \"password\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710739482139,
+      "stop": 1710739490312
+    },
+    {
+      "name": "When  I click \"Login\" button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710739490312,
+      "stop": 1710739490729
+    },
+    {
+      "name": "Then  I should be logged in successfully",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710739490729,
+      "stop": 1710739492767
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710739476018,
+  "stop": 1710739492768
+}

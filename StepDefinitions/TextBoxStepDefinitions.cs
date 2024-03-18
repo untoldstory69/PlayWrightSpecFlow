@@ -40,5 +40,12 @@ namespace PlayWrightSpecFlow.StepDefinitions
         {
             await _textBoxPage.VerifySubmitButtonClicked("Name:testFullName");
         }
+
+        [Then(@"form should be Not submitted")]
+        public async Task ThenFormShouldBeNotSubmitted()
+        {
+            await _textBoxPage.VerifySubmitButtonClicked("Name:testFullName");
+        }
+
     }
 }

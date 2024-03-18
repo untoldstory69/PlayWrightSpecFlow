@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Mar 18 15:38:33 AEST 2024","Mon Mar 18 15:38:53 AEST 2024","19285","","","","","","User should be successfully login",""
+"passed","Mon Mar 18 15:38:50 AEST 2024","Mon Mar 18 15:39:01 AEST 2024","11612","","","","","","TextBox Submit User Details (failing this scennario intentionally for testing purpose)",""
+"failed","Mon Mar 18 15:31:32 AEST 2024","Mon Mar 18 15:31:48 AEST 2024","15883","","","","","","User should be successfully login (this scenario failing)",""
+"passed","Mon Mar 18 15:38:33 AEST 2024","Mon Mar 18 15:38:48 AEST 2024","14357","","","","","","TextBox Submit User Details",""

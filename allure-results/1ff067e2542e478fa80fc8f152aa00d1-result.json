@@ -1,0 +1,103 @@
+{
+  "uuid": "1849f0ee-9991-449d-9aa3-d6004b4bb74b",
+  "historyId": "4eaa8144cda216aac64eccc687e9375e",
+  "testCaseId": "04a6ad78c7d6b14c920cc512854dcce1",
+  "fullName": "PlayWrightSpecFlow/Features/TextBox/TextBox Submit User Details (failing this scennario intentionally for testing purpose)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "TextBox"
+    }
+  ],
+  "links": [],
+  "name": "TextBox Submit User Details (failing this scennario intentionally for testing purpose)",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am on the TextBox page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710740330013,
+      "stop": 1710740336094
+    },
+    {
+      "name": "And  I enter valid detais",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710740336094,
+      "stop": 1710740341458
+    },
+    {
+      "name": "When  I click Submit",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710740341459,
+      "stop": 1710740341592
+    },
+    {
+      "name": "Then  form should be Not submitted",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710740341592,
+      "stop": 1710740341625
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710740330013,
+  "stop": 1710740341625
+}
