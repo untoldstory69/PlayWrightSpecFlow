@@ -28,6 +28,9 @@ namespace PlayWrightSpecFlow.Pages
 
         public async Task VerifyCheckBoxIsUnChecked(string chkLocator) => await _page.Locator(chkLocator)!.IsCheckedAsync();
 
+        public async Task CheckRadioButton(string rbLocator) => await _page.Locator(rbLocator).CheckAsync();
+
+        public async Task VerifyRadioBtnIsChecked(string rbLocator) => await _page.Locator(rbLocator).IsCheckedAsync();
 
     }
 }

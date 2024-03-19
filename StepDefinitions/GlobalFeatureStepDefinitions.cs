@@ -71,6 +71,20 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.VerifyCheckBoxIsUnChecked(locator);
         }
 
+        [StepDefinition(@"I check the radio button ""([^""]*)"" with the element locator ""([^""]*)""")]
+        public async Task WhenICheckTheRadioButtonWithTheElementLocator(string p0, string locator)
+        {
+            await _globalPage.CheckRadioButton(locator);
+        }
+
+        [StepDefinition(@"I verify the radio button ""([^""]*)"" with the element locator ""([^""]*)"" is checked")]
+        public async Task ThenIVerifyTheRadioButtonWithTheElementLocatorIsChecked(string p0, string locator)
+        {
+            await _globalPage.VerifyRadioBtnIsChecked(locator);    
+        }
+
+
+
 
 
 

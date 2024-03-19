@@ -1,0 +1,118 @@
+{
+  "uuid": "2863c83f-e16f-4a92-8917-e61f461a57ae",
+  "historyId": "d2da3f30bf55ff10b584141e3c1aaef7",
+  "testCaseId": "1f4c9f50c3829d307faa6f006ebd2bdb",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Checkbox",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Checkbox",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://demoqa.com/checkbox\" with window size \"1920\" * \"1080\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710831154969,
+      "stop": 1710831183958
+    },
+    {
+      "name": "When  I check the element \"element name\" with element locator \"//span[@class='rct-node-icon']//*[name()='svg']\"in the checkbox",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710831183958,
+      "stop": 1710831188091
+    },
+    {
+      "name": "Then  I verify the element \"element name\" with element locator \"//span[@class='rct-node-icon']//*[name()='svg']\" is checked",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710831188092,
+      "stop": 1710831188115
+    },
+    {
+      "name": "And  I uncheck the element \"element name\" with element locator \"//span[@class='rct-node-icon']//*[name()='svg']\" in the checkbox",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710831188115,
+      "stop": 1710831203948
+    },
+    {
+      "name": "Then  I verify the element \"element name\" with element locator \"//span[@class='rct-node-icon']//*[name()='svg']\" is unchecked",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710831203948,
+      "stop": 1710831203959
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710831154955,
+  "stop": 1710831203959
+}

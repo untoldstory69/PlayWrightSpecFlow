@@ -138,20 +138,53 @@ this.ScenarioInitialize(scenarioInfo);
                         " * \"1080\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 17
- testRunner.When("I check the element \"Home\" with element locator \"//span[@class=\'rct-node-icon\']//" +
-                        "*[name()=\'svg\']\"in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I check the element \"element name\" with element locator \"//span[@class=\'rct-node-" +
+                        "icon\']//*[name()=\'svg\']\"in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
- testRunner.Then("I verify the element \"Home\" with element locator \"//span[@class=\'rct-node-icon\']/" +
-                        "/*[name()=\'svg\']\" is checked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I verify the element \"element name\" with element locator \"//span[@class=\'rct-node" +
+                        "-icon\']//*[name()=\'svg\']\" is checked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 19
- testRunner.And("I uncheck the element \"Home\" with element locator \"//span[@class=\'rct-node-icon\']" +
-                        "//*[name()=\'svg\']\" in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I uncheck the element \"element name\" with element locator \"//span[@class=\'rct-nod" +
+                        "e-icon\']//*[name()=\'svg\']\" in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
- testRunner.Then("I verify the element \"Home\" with element locator \"//span[@class=\'rct-node-icon\']/" +
-                        "/*[name()=\'svg\']\" is unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I verify the element \"element name\" with element locator \"//span[@class=\'rct-node" +
+                        "-icon\']//*[name()=\'svg\']\" is unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Radio button")]
+        public void RadioButton()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Radio button", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 22
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 23
+ testRunner.Given("I open the browser with URL \"https://demoqa.com/radio-button\" with window size \"1" +
+                        "920\" * \"1080\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 24
+ testRunner.When("I check the radio button \"element name\" with the element locator \"//label[@for=\'i" +
+                        "mpressiveRadio\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+ testRunner.Then("I verify the radio button \"element name\" with the element locator \"//label[@for=\'" +
+                        "impressiveRadio\']\" is checked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
