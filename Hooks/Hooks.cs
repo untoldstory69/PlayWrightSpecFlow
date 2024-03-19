@@ -1,12 +1,8 @@
 ﻿using Allure.Net.Commons;
 using Microsoft.Playwright;
-using Microsoft.Playwright.NUnit;
 using NUnit.Framework;
 using PlayWrightSpecFlow.Drivers;
-using PlayWrightSpecFlow.Pages;
 using System.Reflection;
-using TechTalk.SpecFlow;
-using static System.Net.Mime.MediaTypeNames;
 [assembly: Parallelizable(ParallelScope.Fixtures)]
 namespace PlayWrightSpecFlow.Hooks
 {

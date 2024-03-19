@@ -1,0 +1,113 @@
+{
+  "uuid": "8e70993f-2405-48e3-bf15-c2758a17c6fb",
+  "historyId": "68f53dba7a6aeb98bf97c49739d0f750",
+  "testCaseId": "7a0225cf3451e68424ee5eca61f59c7f",
+  "fullName": "PlayWrightSpecFlow/Features/Login Feature/Login Fail (this scenario is intentionally failed)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Login Feature"
+    }
+  ],
+  "links": [],
+  "name": "Login Fail (this scenario is intentionally failed)",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Locator expected to have text 'untoldstory1'\nBut was: 'untoldstory' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#userName-value\")\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"",
+    "trace": "Microsoft.Playwright.PlaywrightException: Locator expected to have text 'untoldstory1'\nBut was: 'untoldstory' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#userName-value\")\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.HomePage.VerifyUserLoggedIn(String username) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\HomePage.cs:line 16\r\n   at PlayWrightSpecFlow.StepDefinitions.LoginFeatureStepDefinitions.ThenIShouldBeLoggedInSuccessfullyFailing() in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\LoginFeatureStepDefinitions.cs:line 53\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am on the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710811643510,
+      "stop": 1710811651951
+    },
+    {
+      "name": "And  I enter valid \"username\" and \"password\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710811651951,
+      "stop": 1710811658139
+    },
+    {
+      "name": "When  I click \"Login\" button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710811658139,
+      "stop": 1710811658480
+    },
+    {
+      "name": "Then  I should be logged in successfully failing",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Locator expected to have text 'untoldstory1'\nBut was: 'untoldstory' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#userName-value\")\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"",
+        "trace": "Microsoft.Playwright.PlaywrightException: Locator expected to have text 'untoldstory1'\nBut was: 'untoldstory' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#userName-value\")\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\n  -   locator resolved to <label color=\"#000000\" class=\"form-label\" id=\"userName-…>untoldstory</label>\n  -   unexpected value \"untoldstory\"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.HomePage.VerifyUserLoggedIn(String username) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\HomePage.cs:line 16\r\n   at PlayWrightSpecFlow.StepDefinitions.LoginFeatureStepDefinitions.ThenIShouldBeLoggedInSuccessfullyFailing() in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\LoginFeatureStepDefinitions.cs:line 53\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710811658481,
+      "stop": 1710811667566
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestScreenShot",
+      "source": "232af638-602a-4e2d-b826-f6b9cbb71893-attachment.png",
+      "type": "image/png"
+    }
+  ],
+  "parameters": [],
+  "start": 1710811643493,
+  "stop": 1710811682436
+}

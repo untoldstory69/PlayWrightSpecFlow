@@ -46,5 +46,12 @@ namespace PlayWrightSpecFlow.StepDefinitions
         {
             await _homePage.VerifyUserLoggedIn("untoldstory");
         }
+
+        [Then(@"I should be logged in successfully failing")]
+        public async Task ThenIShouldBeLoggedInSuccessfullyFailing()
+        {
+            await _homePage.VerifyUserLoggedIn("untoldstory1");
+        }
+
     }
 }
