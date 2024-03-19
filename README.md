@@ -34,3 +34,6 @@
 
 ### Attaching screenshot in the allure report when test fails
 		Hook.cs is updated accordingly.
+
+
+### Replace Given, When and Then in the step definition with StepDefinition, so that the steps won't be GWT specific.

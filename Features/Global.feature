@@ -1,9 +1,9 @@
 ﻿Feature: Global Feature
 
-A short summary of the feature
+This Featue files contains the global features used in web application
 
 @tag1
-Scenario: Testing Global Feature
+Scenario: Input Field such as text field, text area
 	Given I open the browser with URL "https://demoqa.com/text-box"
 	And I fill in the input field "#userName" with the input value "the rock"
 	And I fill in the input field "#userEmail" with the input value "test@gmail.com"
@@ -12,7 +12,10 @@ Scenario: Testing Global Feature
 	When I click button "#submit"
 
 	
-Scenario: Testing Global Feature 1
+Scenario: Checkbox 
 	Given I open the browser with URL "https://demoqa.com/checkbox" with window size "1920" * "1080"
-	And I check the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']"in the checkbox
-	And I verify the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']" is checked
+	When I check the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']"in the checkbox
+	Then I verify the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']" is checked
+	And I uncheck the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']" in the checkbox
+	Then I verify the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']" is unchecked
+	
