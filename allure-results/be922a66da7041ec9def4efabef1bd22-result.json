@@ -1,0 +1,105 @@
+{
+  "uuid": "188b720f-e52b-4c32-85b4-638f696a047a",
+  "historyId": "4eaa8144cda216aac64eccc687e9375e",
+  "testCaseId": "04a6ad78c7d6b14c920cc512854dcce1",
+  "fullName": "PlayWrightSpecFlow/Features/TextBox/TextBox Submit User Details (failing this scennario intentionally for testing purpose)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "TextBox"
+    }
+  ],
+  "links": [],
+  "name": "TextBox Submit User Details (failing this scennario intentionally for testing purpose)",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Interface cannot be resolved: Microsoft.Playwright.IPage (resolution path: PlayWrightSpecFlow.Hooks.Hooks)",
+    "trace": "BoDi.ObjectContainerException: Interface cannot be resolved: Microsoft.Playwright.IPage (resolution path: PlayWrightSpecFlow.Hooks.Hooks)\r\n   at BoDi.ObjectContainer.TypeRegistration.<>c__DisplayClass3_0.<ResolvePerContext>b__1()\r\n   at BoDi.ObjectContainer.RegistrationWithStrategy.ExecuteWithLock(Object lockObject, Func`1 getter, Func`1 factory, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.TypeRegistration.ResolvePerContext(ObjectContainer container, RegistrationKey keyToResolve, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.RegistrationWithStrategy.Resolve(ObjectContainer container, RegistrationKey keyToResolve, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.ResolveObject(RegistrationKey keyToResolve, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.Resolve(Type typeToResolve, ResolutionList resolutionPath, String name)\r\n   at BoDi.ObjectContainer.<>c__DisplayClass71_0.<ResolveArguments>b__0(ParameterInfo p)\r\n   at System.Linq.Enumerable.SelectArrayIterator`2.ToArray()\r\n   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)\r\n   at BoDi.ObjectContainer.ResolveArguments(IEnumerable`1 parameters, RegistrationKey keyToResolve, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.CreateObject(Type type, ResolutionList resolutionPath, RegistrationKey keyToResolve)\r\n   at BoDi.ObjectContainer.TypeRegistration.<>c__DisplayClass3_0.<ResolvePerContext>b__1()\r\n   at BoDi.ObjectContainer.RegistrationWithStrategy.ExecuteWithLock(Object lockObject, Func`1 getter, Func`1 factory, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.TypeRegistration.ResolvePerContext(ObjectContainer container, RegistrationKey keyToResolve, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.RegistrationWithStrategy.Resolve(ObjectContainer container, RegistrationKey keyToResolve, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.ResolveObject(RegistrationKey keyToResolve, ResolutionList resolutionPath)\r\n   at BoDi.ObjectContainer.Resolve(Type typeToResolve, ResolutionList resolutionPath, String name)\r\n   at BoDi.ObjectContainer.Resolve(Type typeToResolve, String name)\r\n   at TechTalk.SpecFlow.Infrastructure.TestObjectResolver.ResolveBindingInstance(Type bindingType, IObjectContainer container)\r\n   at lambda_method51(Closure , IContextManager )\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.CallBaseInvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.MakeFixtureFromScenarioHook(Action`2 callLastHook, Action`1 startFixture, IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, HookBinding hook)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am on the TextBox page",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710803081418,
+      "stop": 1710803081418
+    },
+    {
+      "name": "And  I enter valid detais",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710803081418,
+      "stop": 1710803081418
+    },
+    {
+      "name": "When  I click Submit",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710803081418,
+      "stop": 1710803081418
+    },
+    {
+      "name": "Then  form should be Not submitted",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710803081418,
+      "stop": 1710803081418
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710803081418,
+  "stop": 1710803081419
+}

@@ -1,35 +1,40 @@
-﻿using NUnit.Framework;
+﻿using Allure.Net.Commons;
+using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
+using NUnit.Framework;
+using PlayWrightSpecFlow.Drivers;
+using PlayWrightSpecFlow.Pages;
+using System.Reflection;
 using TechTalk.SpecFlow;
+using static System.Net.Mime.MediaTypeNames;
 [assembly: Parallelizable(ParallelScope.Fixtures)]
 namespace PlayWrightSpecFlow.Hooks
 {
     [Binding]
     public sealed class Hooks
     {
-        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
-
-        [BeforeScenario("@tag1")]
-        public void BeforeScenarioWithTag()
+        private readonly Driver _driver;
+        public Hooks(Driver driver)
         {
-            // Example of filtering hooks using tags. (in this case, this 'before scenario' hook will execute if the feature/scenario contains the tag '@tag1')
-            // See https://docs.specflow.org/projects/specflow/en/latest/Bindings/Hooks.html?highlight=hooks#tag-scoping
+            _driver = driver;
 
-            //TODO: implement logic that has to run before executing each scenario
         }
+        [AfterStep]
+        public async Task AfterStep(ScenarioContext context) { 
+            if (context.TestError != null)
+            {
+                var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                var screenShotName = "failedTest.png";
+                  await _driver.Page.ScreenshotAsync(new PageScreenshotOptions
+                    {
+                        Path = screenShotName
+                    });
 
-        [BeforeScenario(Order = 1)]
-        public void FirstBeforeScenario()
-        {
-            // Example of ordering the execution of hooks
-            // See https://docs.specflow.org/projects/specflow/en/latest/Bindings/Hooks.html?highlight=order#hook-execution-order
+                    AllureApi.AddAttachment("TestScreenShot", "image/png", path + "\\" + screenShotName);
+                
+            }
 
-            //TODO: implement logic that has to run before executing each scenario
         }
-
-        [AfterScenario]
-        public void AfterScenario()
-        {
-            //TODO: implement logic that has to run after executing each scenario
-        }
-    }
+       
+    } 
 }
