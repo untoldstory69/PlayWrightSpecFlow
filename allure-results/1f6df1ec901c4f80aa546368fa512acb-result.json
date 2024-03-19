@@ -1,0 +1,132 @@
+{
+  "uuid": "2ea72841-ca3f-46c5-a7c5-0f1e566dd994",
+  "historyId": "0989a7d90b38c8bd8259807da67eb578",
+  "testCaseId": "1b8941c3fb47bebcba8d369dccf8571e",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/User should be successfully login",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "User should be successfully login",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"username\")",
+    "trace": "System.TimeoutException: Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"username\")\r\n   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206\r\n   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 526\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.FillInText(String locator, String text) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 27\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIFillInWithThe(String fieldIdentifier, String value) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 25\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am on the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710821065048,
+      "stop": 1710821067777
+    },
+    {
+      "name": "And  I fill in \"username\" with the \"untoldstory\"",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"username\")",
+        "trace": "System.TimeoutException: Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"username\")\r\n   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206\r\n   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 526\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.FillInText(String locator, String text) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 27\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIFillInWithThe(String fieldIdentifier, String value) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 25\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710821067793,
+      "stop": 1710821097815
+    },
+    {
+      "name": "And  I fill in \"password\" with the \"Pikachu@123\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710821098184,
+      "stop": 1710821098186
+    },
+    {
+      "name": "When  I click \"Login\" button",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710821098189,
+      "stop": 1710821098189
+    },
+    {
+      "name": "Then  I should be logged in successfully",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710821098190,
+      "stop": 1710821098190
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestScreenShot",
+      "source": "79afee4d-21b5-4b7e-9c5f-287f9a17d6db-attachment.png",
+      "type": "image/png"
+    }
+  ],
+  "parameters": [],
+  "start": 1710821065034,
+  "stop": 1710821098202
+}

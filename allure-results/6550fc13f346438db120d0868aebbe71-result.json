@@ -1,0 +1,137 @@
+{
+  "uuid": "07a65595-86fe-4461-8d61-8c7f4d973ce8",
+  "historyId": "6f30382eba75b10c1c93db8b1ba145e4",
+  "testCaseId": "10a796c7bf4df3a9d5f96544836d6937",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Testing Gloabl Feature",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "17"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "Testing Gloabl Feature",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am on the TextBox page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710823859136,
+      "stop": 1710823864358
+    },
+    {
+      "name": "And  I fill in the input field \"#userName\" with the input value \"the rock\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710823864372,
+      "stop": 1710823867727
+    },
+    {
+      "name": "And  I fill in the input field \"#userEmail\" with the input value \"test@gmail.com\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710823867728,
+      "stop": 1710823867767
+    },
+    {
+      "name": "And  I fill in the input field \"#currentAddress\" with the input value \"brisbane australia\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710823867767,
+      "stop": 1710823867790
+    },
+    {
+      "name": "And  I fill in the input field \"#permanentAddress\" with the input value \"BNE Australia\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710823871956,
+      "stop": 1710823872364
+    },
+    {
+      "name": "When  I click button \"#submit\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710823873321,
+      "stop": 1710823874041
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710823859101,
+  "stop": 1710823874071
+}
