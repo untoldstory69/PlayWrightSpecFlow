@@ -13,5 +13,6 @@ Scenario: Testing Global Feature
 
 	
 Scenario: Testing Global Feature 1
-	Given I open the browser with URL "https://demoqa.com/text-box" with window size "1920" & "1080"
-	And I fill in the input field "#userName" with the input value "the rock"
+	Given I open the browser with URL "https://demoqa.com/checkbox" with window size "1920" * "1080"
+	And I check the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']"in the checkbox
+	And I verify the element "Home" with element locator "//span[@class='rct-node-icon']//*[name()='svg']" is checked

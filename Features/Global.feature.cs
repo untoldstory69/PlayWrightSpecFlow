@@ -134,11 +134,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 16
- testRunner.Given("I open the browser with URL \"https://demoqa.com/text-box\" with window size \"1920\"" +
-                        " & \"1080\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open the browser with URL \"https://demoqa.com/checkbox\" with window size \"1920\"" +
+                        " * \"1080\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 17
- testRunner.And("I fill in the input field \"#userName\" with the input value \"the rock\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I check the element \"Home\" with element locator \"//span[@class=\'rct-node-icon\']//" +
+                        "*[name()=\'svg\']\"in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
+ testRunner.And("I verify the element \"Home\" with element locator \"//span[@class=\'rct-node-icon\']/" +
+                        "/*[name()=\'svg\']\" is checked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

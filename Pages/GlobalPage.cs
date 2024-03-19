@@ -20,6 +20,9 @@ namespace PlayWrightSpecFlow.Pages
 
         public async Task ClickButton(string btnLocator) => await _page.Locator(btnLocator).ClickAsync();
 
+        public async Task CheckTheElement(string chkLocator) => await _page.Locator(chkLocator).CheckAsync();
+
+        public async Task VerifyCheckBoxIsChecked(string chkLocator) => await _page.Locator(chkLocator).IsCheckedAsync();
         
 
     }

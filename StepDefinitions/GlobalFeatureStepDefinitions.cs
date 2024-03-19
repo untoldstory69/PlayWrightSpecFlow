@@ -25,16 +25,13 @@ namespace PlayWrightSpecFlow.StepDefinitions
             _driver.Page.GotoAsync(URL);
         }
 
-        [Given(@"I open the browser with URL ""([^""]*)"" with window size ""([^""]*)"" & ""([^""]*)""")]
+        [Given(@"I open the browser with URL ""([^""]*)"" with window size ""([^""]*)"" \* ""([^""]*)""")]
         public void GivenIOpenTheBrowserWithURLWithWindowSize(string URL, int width, int height)
         {
             _driver.Page.GotoAsync(URL);
             _driver.Page.SetViewportSizeAsync(width, height);
         }
-
-
-
-
+        
         [Given(@"I fill in the input field ""([^""]*)"" with the input value ""([^""]*)""")]
         public async Task GivenIFillInTheInputFieldWithTheInputValue(string locator, string value)
         {
@@ -48,6 +45,22 @@ namespace PlayWrightSpecFlow.StepDefinitions
         {
             await _globalPage.ClickButton(btnLocator);
         }
+
+        
+        [Given(@"I check the element ""([^""]*)"" with element locator ""([^""]*)""in the checkbox")]
+        public async Task GivenICheckTheElementWithElementLocatorInTheCheckbox(string elementName, string elementLocator)
+        {
+            await _globalPage.CheckTheElement(elementLocator);
+        }
+
+        [Given(@"I verify the element ""([^""]*)"" with element locator ""([^""]*)"" is checked")]
+        public async Task GivenIVerifyTheElementWithElemenLocatorIsChecked(string elementName, string locator)
+        {
+            await _globalPage.VerifyCheckBoxIsChecked(locator);
+        }
+
+
+
 
 
     }

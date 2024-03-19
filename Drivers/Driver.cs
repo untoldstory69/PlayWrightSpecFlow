@@ -21,9 +21,6 @@ namespace PlayWrightSpecFlow.Drivers
 
         public IPage Page => _page.Result;
 
-       
-
-
         // creating/initializing playwright
         private async Task<IPage> InitializePlaywright()
         {
@@ -31,7 +28,7 @@ namespace PlayWrightSpecFlow.Drivers
             var playwright = await Playwright.CreateAsync();
 
             //create browser instance
-            _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            _browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false  
 
