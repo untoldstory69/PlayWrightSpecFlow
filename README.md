@@ -31,3 +31,6 @@
 		allure serve
 			>>> creates the same report as allure generate but puts it into a temporary directory and starts a local web server configured to show this directory's contents. The command then automatically opens the main page of the report in a web browser.
 				Use this command if you need to view the report  and do not need to save it.
+
+### Attaching screenshot in the allure report when test fails
+		Hook.cs is updated accordingly.
