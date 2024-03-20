@@ -111,6 +111,11 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.RightClickButton(locator);
         }
 
+        [StepDefinition(@"I upload file ""([^""]*)"" with locator ""([^""]*)""")]
+        public async Task WhenIUploadFileWithLocator(string fileName, string locator)
+        {
+            await _globalPage.UploadFile(fileName, locator);
+        }
 
 
 

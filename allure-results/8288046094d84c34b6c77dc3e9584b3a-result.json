@@ -1,0 +1,88 @@
+{
+  "uuid": "02e71595-1768-41ce-a30a-1557e0697204",
+  "historyId": "b972e60289a3e266e67fc8fbafae8ee4",
+  "testCaseId": "7c33d6e6a68285e9ff04e7ca262a25b1",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Upload File",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "17"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Upload File",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://demoqa.com/upload-download\" with window size \"1920\" * \"1080\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710899923729,
+      "stop": 1710899927383
+    },
+    {
+      "name": "When  I upload file \"C:\\Users\\kishor.sharma\\Downloads\\sampleFile.jpeg\" with locator \"#uploadFile\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710899940968,
+      "stop": 1710899941255
+    },
+    {
+      "name": "Then  I verify message \"C:\\fakepath\\sampleFile.jpeg\" is shown on locator \"#uploadedFilePath\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710899954492,
+      "stop": 1710899954550
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710899922837,
+  "stop": 1710899954571
+}

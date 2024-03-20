@@ -33,7 +33,11 @@ Scenario: Buttons
 	When I right click "Right Click Me" button with locator "#rightClickBtn"
 	Then I verify message "You have done a right click" is shown on locator "#rightClickMessage"
 
-
+Scenario: Upload File
+	Given I open the browser with URL "https://demoqa.com/upload-download" with window size "1920" * "1080"
+	When I upload file "C:\Users\kishor.sharma\Downloads\sampleFile.jpeg" with locator "#uploadFile"
+	Then I verify message "C:\fakepath\sampleFile.jpeg" is shown on locator "#uploadedFilePath"
+	
 
 	
 	

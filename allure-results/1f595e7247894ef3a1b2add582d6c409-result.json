@@ -1,0 +1,98 @@
+{
+  "uuid": "96c0255c-1302-43f6-aebe-ac2387dbdf53",
+  "historyId": "94126064468e76b1aac9d4cfea9af0e8",
+  "testCaseId": "ca43ba825e9481435180acd681fdeb64",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Links",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "17"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Links",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Page URL expected to be 'https://demoqa.com/'\nBut was: 'https://demoqa.com/links' \nCall log:\n  - PageAssertions.ToHaveURLAsync with timeout 5000ms\n  - waiting for Locator(\":root\")\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"",
+    "trace": "Microsoft.Playwright.PlaywrightException: Page URL expected to be 'https://demoqa.com/'\nBut was: 'https://demoqa.com/links' \nCall log:\n  - PageAssertions.ToHaveURLAsync with timeout 5000ms\n  - waiting for Locator(\":root\")\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyURLNewTab(String URL) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 49\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIVerifyURLOfNewPageInNewTabIs(String URL) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 123\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://demoqa.com/links\" with window size \"1920\" * \"1080\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710898227866,
+      "stop": 1710898231631
+    },
+    {
+      "name": "And  I click on the link \"Home\" with locator \"#simpleLink\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710898231642,
+      "stop": 1710898235413
+    },
+    {
+      "name": "And  I verify URL of new page in new tab is \"https://demoqa.com/\"",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Page URL expected to be 'https://demoqa.com/'\nBut was: 'https://demoqa.com/links' \nCall log:\n  - PageAssertions.ToHaveURLAsync with timeout 5000ms\n  - waiting for Locator(\":root\")\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"",
+        "trace": "Microsoft.Playwright.PlaywrightException: Page URL expected to be 'https://demoqa.com/'\nBut was: 'https://demoqa.com/links' \nCall log:\n  - PageAssertions.ToHaveURLAsync with timeout 5000ms\n  - waiting for Locator(\":root\")\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\n  -   locator resolved to <html>…</html>\n  -   unexpected value \"https://demoqa.com/links\"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyURLNewTab(String URL) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 49\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIVerifyURLOfNewPageInNewTabIs(String URL) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 123\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710898235414,
+      "stop": 1710898253552
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestScreenShot",
+      "source": "d58aee28-b0d6-4191-9e58-de366ba3e0e8-attachment.png",
+      "type": "image/png"
+    }
+  ],
+  "parameters": [],
+  "start": 1710898227844,
+  "stop": 1710898284659
+}

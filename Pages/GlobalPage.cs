@@ -42,5 +42,7 @@ namespace PlayWrightSpecFlow.Pages
         {
             Button = MouseButton.Right
         });
+
+        public async Task UploadFile(string fileName, string locator) => await _page.Locator(locator).SetInputFilesAsync(fileName);
     }
 }
