@@ -1,5 +1,6 @@
 ﻿using Microsoft.Playwright;
 using Microsoft.Playwright.NUnit;
+using NUnit.Framework;
 
 namespace PlayWrightSpecFlow.Pages
 {
@@ -44,5 +45,20 @@ namespace PlayWrightSpecFlow.Pages
         });
 
         public async Task UploadFile(string fileName, string locator) => await _page.Locator(locator).SetInputFilesAsync(fileName);
+
+        public async Task ClickAlertVerifyMsg(string locator, string expectedMsg)
+        {
+            void alert(object sender, IDialog dialog)
+            {
+               
+                Assert.That(dialog.Message, Is.EqualTo(expectedMsg)); 
+                dialog.DismissAsync();
+                _page.Dialog -= alert;
+            }
+            _page.Dialog += alert;
+            await _page.Locator(locator).ClickAsync();
+
+        }
+
     }
 }

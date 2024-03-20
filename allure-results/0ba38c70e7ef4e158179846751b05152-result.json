@@ -1,0 +1,88 @@
+{
+  "uuid": "2435a3f3-5b26-4703-8a35-b0ebeb8d1c97",
+  "historyId": "c6c04e1f31e413cc5d3b35e2ab85eca7",
+  "testCaseId": "f6b9e0fa0336b11d9367ef774c4f9f2d",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Alerts",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "17"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Alerts",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://testpages.eviltester.com/styled/alerts/alert-test.html\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710911040917,
+      "stop": 1710911043424
+    },
+    {
+      "name": "When  I click alert button \"Click Me\" with locator \"#alertexamples\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710911044981,
+      "stop": 1710911061408
+    },
+    {
+      "name": "Then  I verify alertbox is shown with message \"I am an alert box!\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710911063172,
+      "stop": 1710911063175
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710911037771,
+  "stop": 1710911063194
+}

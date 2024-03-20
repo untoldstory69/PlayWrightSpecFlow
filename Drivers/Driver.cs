@@ -28,7 +28,7 @@ namespace PlayWrightSpecFlow.Drivers
             var playwright = await Playwright.CreateAsync();
 
             //create browser instance
-            _browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
+            _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false  
 

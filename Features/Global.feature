@@ -37,6 +37,12 @@ Scenario: Upload File
 	Given I open the browser with URL "https://demoqa.com/upload-download" with window size "1920" * "1080"
 	When I upload file "C:\Users\kishor.sharma\Downloads\sampleFile.jpeg" with locator "#uploadFile"
 	Then I verify message "C:\fakepath\sampleFile.jpeg" is shown on locator "#uploadedFilePath"
+
+Scenario: Alerts
+	Given I open the browser with URL "https://testpages.eviltester.com/styled/alerts/alert-test.html"
+	When I click alert button "Click Me" with locator "#alertexamples" and verify alert message "I am an alert box!"
+	
+
 	
 
 	

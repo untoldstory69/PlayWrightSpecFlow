@@ -117,6 +117,12 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.UploadFile(fileName, locator);
         }
 
+        [StepDefinition(@"I click alert button ""([^""]*)"" with locator ""([^""]*)"" and verify alert message ""([^""]*)""")]
+        public async Task WhenIClickAlertButtonWithLocatorAndVerifyAlertMessage(string p0, string locator, string expectedMsg)
+        {
+            await _globalPage.ClickAlertVerifyMsg(locator, expectedMsg);
+        }
+
 
 
 
