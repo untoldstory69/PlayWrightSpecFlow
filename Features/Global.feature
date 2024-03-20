@@ -40,7 +40,12 @@ Scenario: Upload File
 
 Scenario: Alerts
 	Given I open the browser with URL "https://testpages.eviltester.com/styled/alerts/alert-test.html"
-	When I click alert button "Click Me" with locator "#alertexamples" and verify alert message "I am an alert box!"
+	And I click alert button "Click Me" with locator "#alertexamples" and verify alert message "I am an alert box!"
+	And I click confirmation alert box "confirm" with locator "#confirmexample" and click OK with text (optional) ""
+	And I click confirmation alert box "confirm" with locator "#confirmexample" and click Cancel 
+	And I click confirmation alert box "Show Prompt Box" with locator "#promptexample" and click OK with text (optional) "I am test"
+	 
+
 	
 
 	

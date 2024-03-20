@@ -291,8 +291,20 @@ this.ScenarioInitialize(scenarioInfo);
                         "-test.html\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 43
- testRunner.When("I click alert button \"Click Me\" with locator \"#alertexamples\" and verify alert me" +
-                        "ssage \"I am an alert box!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click alert button \"Click Me\" with locator \"#alertexamples\" and verify alert me" +
+                        "ssage \"I am an alert box!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 44
+ testRunner.And("I click confirmation alert box \"confirm\" with locator \"#confirmexample\" and click" +
+                        " OK with text (optional) \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 45
+ testRunner.And("I click confirmation alert box \"confirm\" with locator \"#confirmexample\" and click" +
+                        " Cancel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 46
+ testRunner.And("I click confirmation alert box \"Show Prompt Box\" with locator \"#promptexample\" an" +
+                        "d click OK with text (optional) \"I am test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

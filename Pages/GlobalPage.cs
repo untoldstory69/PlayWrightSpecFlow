@@ -1,6 +1,7 @@
 ﻿using Microsoft.Playwright;
 using Microsoft.Playwright.NUnit;
 using NUnit.Framework;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PlayWrightSpecFlow.Pages
 {
@@ -50,15 +51,37 @@ namespace PlayWrightSpecFlow.Pages
         {
             void alert(object sender, IDialog dialog)
             {
-               
+              
                 Assert.That(dialog.Message, Is.EqualTo(expectedMsg)); 
                 dialog.DismissAsync();
                 _page.Dialog -= alert;
             }
             _page.Dialog += alert;
             await _page.Locator(locator).ClickAsync();
-
         }
+
+        public async Task ClickOKConfirmationAlert(string locator, string text)
+        {
+            void alert(object sender, IDialog dialog)
+            {
+                dialog.AcceptAsync(text);
+                _page.Dialog -= alert;
+            }
+            _page.Dialog += alert;
+            await _page.Locator(locator).ClickAsync();
+        }
+
+        public async Task ClickCancelConfirmationAlert(string locator)
+        {
+            void alert(object sender, IDialog dialog)
+            {
+                dialog.DismissAsync();
+                _page.Dialog -= alert;
+            }
+            _page.Dialog += alert;
+            await _page.Locator(locator).ClickAsync();
+        }
+
 
     }
 }

@@ -124,6 +124,21 @@ namespace PlayWrightSpecFlow.StepDefinitions
         }
 
 
+        [StepDefinition(@"I click confirmation alert box ""([^""]*)"" with locator ""([^""]*)"" and click OK with text \(optional\) ""([^""]*)""")]
+        public async Task GivenIClickConfirmationAlertBoxWithLocatorAndClickOKWithTextOptional(string confirm, string locator, string text)
+        {
+            await _globalPage.ClickOKConfirmationAlert(locator, text);
+        }
+
+        [StepDefinition(@"I click confirmation alert box ""([^""]*)"" with locator ""([^""]*)"" and click Cancel")]
+        public async Task GivenIClickConfirmationAlertBoxWithLocatorAndClickCancel(string confirm, string locator)
+        {
+            await _globalPage.ClickCancelConfirmationAlert(locator);
+        }
+
+
+
+
 
 
     }
