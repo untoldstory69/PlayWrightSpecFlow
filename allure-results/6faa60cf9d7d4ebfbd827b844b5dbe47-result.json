@@ -1,0 +1,128 @@
+{
+  "uuid": "b025aae2-8824-4fed-8569-eb371524c72c",
+  "historyId": "7a1a15dcb5aa271da1a888822beec530",
+  "testCaseId": "bfd3cd1900915a7886bc7d3e96d2bf15",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Buttons",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Buttons",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Locator expected to have text 'You have done a dynamic click'\nBut was: 'You have done a double click' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#doubleClickMessage\")\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"",
+    "trace": "Microsoft.Playwright.PlaywrightException: Locator expected to have text 'You have done a dynamic click'\nBut was: 'You have done a double click' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#doubleClickMessage\")\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyMessageShown(String message, String locator) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 37\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.ThenIVerifyMessageIsShownOnLocator(String message, String locator) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 99\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://demoqa.com/buttons\" with window size \"1920\" * \"1080\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710894190642,
+      "stop": 1710894195426
+    },
+    {
+      "name": "When  I click \"clickMe\" button with text \"Click Me\" of Nth \"2\" element",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710894195435,
+      "stop": 1710894199106
+    },
+    {
+      "name": "Then  I verify message \"You have done a dynamic click\" is shown on locator \"#dynamicClickMessage\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710894199106,
+      "stop": 1710894199193
+    },
+    {
+      "name": "When  I double click \"double click me\" button with locator \"#doubleClickBtn\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710894199194,
+      "stop": 1710894199414
+    },
+    {
+      "name": "Then  I verify message \"You have done a dynamic click\" is shown on locator \"#doubleClickMessage\"",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Locator expected to have text 'You have done a dynamic click'\nBut was: 'You have done a double click' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#doubleClickMessage\")\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"",
+        "trace": "Microsoft.Playwright.PlaywrightException: Locator expected to have text 'You have done a dynamic click'\nBut was: 'You have done a double click' \nCall log:\n  - LocatorAssertions.ToHaveTextAsync with timeout 5000ms\n  - waiting for Locator(\"#doubleClickMessage\")\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\n  -   locator resolved to <p id=\"doubleClickMessage\">You have done a double click</p>\n  -   unexpected value \"You have done a double click\"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyMessageShown(String message, String locator) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 37\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.ThenIVerifyMessageIsShownOnLocator(String message, String locator) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 99\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710894199414,
+      "stop": 1710894204429
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestScreenShot",
+      "source": "572df795-c112-41d0-9f22-714d25c2f64b-attachment.png",
+      "type": "image/png"
+    }
+  ],
+  "parameters": [],
+  "start": 1710894190631,
+  "stop": 1710894205114
+}

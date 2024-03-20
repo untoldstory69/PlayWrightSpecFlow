@@ -9,7 +9,7 @@ Scenario: Input Field such as text field, text area
 	And I fill in the input field "#userEmail" with the input value "test@gmail.com"
 	And I fill in the input field "#currentAddress" with the input value "brisbane australia"
 	And I fill in the input field "#permanentAddress" with the input value "BNE Australia"
-	When I click button "#submit"
+	When I click "Submit" button with locator "#submit"
 
 	
 Scenario: Checkbox 
@@ -23,5 +23,17 @@ Scenario: Radio button
 	Given I open the browser with URL "https://demoqa.com/radio-button" with window size "1920" * "1080" 
 	When I check the radio button "element name" with the element locator "//label[@for='impressiveRadio']" 
 	Then I verify the radio button "element name" with the element locator "//label[@for='impressiveRadio']" is checked
+
+Scenario: Buttons
+	Given I open the browser with URL "https://demoqa.com/buttons" with window size "1920" * "1080"
+	When I click "clickMe" button with text "Click Me" of Nth "2" element 
+	Then I verify message "You have done a dynamic click" is shown on locator "#dynamicClickMessage"
+	When I double click "double click me" button with locator "#doubleClickBtn"
+	Then I verify message "You have done a double click" is shown on locator "#doubleClickMessage"
+	When I right click "Right Click Me" button with locator "#rightClickBtn"
+	Then I verify message "You have done a right click" is shown on locator "#rightClickMessage"
+
+
+
 	
 	

@@ -32,5 +32,15 @@ namespace PlayWrightSpecFlow.Pages
 
         public async Task VerifyRadioBtnIsChecked(string rbLocator) => await _page.Locator(rbLocator).IsCheckedAsync();
 
+        public async Task ClickButtonWithText(string btnTxt, int n) => await _page.GetByText(btnTxt).Nth(n).ClickAsync();
+
+        public async Task VerifyMessageShown(string message, string locator) => await Expect(_page.Locator(locator)).ToHaveTextAsync(message);
+
+        public async Task DoubleClickButton(string locator) => await _page.Locator(locator).DblClickAsync();
+
+        public async Task RightClickButton(string locator) => await _page.Locator(locator).ClickAsync(new LocatorClickOptions()
+        {
+            Button = MouseButton.Right
+        });
     }
 }

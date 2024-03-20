@@ -40,13 +40,15 @@ namespace PlayWrightSpecFlow.StepDefinitions
         }
 
        
-        [StepDefinition(@"I click button ""([^""]*)""")]
-        public async Task WhenIClickButton(string btnLocator)
+      
+        [StepDefinition(@"I click ""([^""]*)"" button with locator ""([^""]*)""")]
+        public async Task GivenIClickButtonWithLocator(string buttonName, string btnLocator)
         {
             await _globalPage.ClickButton(btnLocator);
         }
 
-        
+
+
         [StepDefinition(@"I check the element ""([^""]*)"" with element locator ""([^""]*)""in the checkbox")]
         public async Task GivenICheckTheElementWithElementLocatorInTheCheckbox(string elementName, string elementLocator)
         {
@@ -83,9 +85,31 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.VerifyRadioBtnIsChecked(locator);    
         }
 
+      
+        [StepDefinition(@"I click ""([^""]*)"" button with text ""([^""]*)"" of Nth ""([^""]*)"" element")]
+        public async Task WhenIClickButtonWithTextOfNthElement(string clickMe, string buttonName, int n)
+        {
+            await _globalPage.ClickButtonWithText(buttonName, n); ;
+        }
 
 
+        [StepDefinition(@"I verify message ""([^""]*)"" is shown on locator ""([^""]*)""")]
+        public async Task ThenIVerifyMessageIsShownOnLocator(string message, string locator)
+        {
+            await _globalPage.VerifyMessageShown(message, locator);
+        }
 
+        [StepDefinition(@"I double click ""([^""]*)"" button with locator ""([^""]*)""")]
+        public async Task WhenIDoubleClickButtonWithLocator(string p0, string locator)
+        {
+            await _globalPage.DoubleClickButton(locator);
+        }
+
+        [StepDefinition(@"I right click ""([^""]*)"" button with locator ""([^""]*)""")]
+        public async Task WhenIRightClickButtonWithLocator(string p0, string locator)
+        {
+            await _globalPage.RightClickButton(locator);
+        }
 
 
 
