@@ -66,10 +66,10 @@ Scenario: IFrame
 	Then I verify text "Nested Page Example" in the iFrame "#theheaderhtml" with locator "//h1[normalize-space()='Nested Page Example']"
 	And I click the element "Index" in the iFrame "#theheaderhtml" with locator "//a[normalize-space()='Index']"
 
-#Scenario: Autocomplete
-#	Given I open the browser with URL "https://demoqa.com/widgets"
-#	And I click "Auto Complete" button with locator "//div[@class='element-list collapse show']//li[@id='item-1']"
-	#And I fill in text "Blue" in the auto complete locator "#autoCompleteMultipleInput"
+Scenario: Autocomplete
+	Given I open the browser with URL "https://demoqa.com/widgets"
+	And I click "Auto Complete" button with locator "//div[@class='element-list collapse show']//li[@id='item-1']"
+	And I fill in text "Blue" in the auto complete locator "#autoCompleteMultipleInput"
 	
 	 
 

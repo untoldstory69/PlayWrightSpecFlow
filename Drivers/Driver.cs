@@ -30,7 +30,8 @@ namespace PlayWrightSpecFlow.Drivers
             //create browser instance
             _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = false  
+                Headless = false,
+                SlowMo = 100
 
             });
             

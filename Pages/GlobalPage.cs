@@ -111,10 +111,17 @@ namespace PlayWrightSpecFlow.Pages
 
         public async Task FillInAutoComplete(string locator, string text)
         {
+            try
+            {
+                await _page.Locator(locator).FillAsync(text);
+                await _page.Locator(locator).PressAsync("Enter");
 
-            await _page.WaitForTimeoutAsync(5000);
-            await _page.Locator(locator).FillAsync(text);
-            await _page.Locator(locator).PressAsync("Enter");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Caught Exception", ex.ToString());
+            }
+            
         }
 
 

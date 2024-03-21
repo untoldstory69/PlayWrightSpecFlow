@@ -1,0 +1,73 @@
+{
+  "uuid": "67ce68f9-bf9c-42a5-a153-5e8d446447d2",
+  "historyId": "1a7d05ebc83685087375cbc6fd96fbc0",
+  "testCaseId": "7e5d1baff2ec44267e6d27e603553ac5",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/New Tab \\/ Window",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "New Tab / Window",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://demoqa.com/browser-windows\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711000343367,
+      "stop": 1711000348483
+    },
+    {
+      "name": "And  I click element \"#windowButton\" to open New Tab/Window and verify Text \"This is a sample page\" in the new tab with locator\"#sampleHeading\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711000348483,
+      "stop": 1711000352982
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1711000343367,
+  "stop": 1711000352983
+}

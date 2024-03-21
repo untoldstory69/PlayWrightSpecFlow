@@ -1,0 +1,118 @@
+{
+  "uuid": "957c89ed-8829-47ee-b6e2-e822474a08b7",
+  "historyId": "c6c04e1f31e413cc5d3b35e2ab85eca7",
+  "testCaseId": "f6b9e0fa0336b11d9367ef774c4f9f2d",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Alerts",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Alerts",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://testpages.eviltester.com/styled/alerts/alert-test.html\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711000254915,
+      "stop": 1711000260603
+    },
+    {
+      "name": "And  I click alert button \"Click Me\" with locator \"#alertexamples\" and verify alert message \"I am an alert box!\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711000260613,
+      "stop": 1711000263778
+    },
+    {
+      "name": "And  I click confirmation alert box \"confirm\" with locator \"#confirmexample\" and click OK with text (optional) \"\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711000263779,
+      "stop": 1711000263951
+    },
+    {
+      "name": "And  I click confirmation alert box \"confirm\" with locator \"#confirmexample\" and click Cancel",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711000263951,
+      "stop": 1711000264109
+    },
+    {
+      "name": "And  I click confirmation alert box \"Show Prompt Box\" with locator \"#promptexample\" and click OK with text (optional) \"I am test\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711000264109,
+      "stop": 1711000264266
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1711000254900,
+  "stop": 1711000264268
+}

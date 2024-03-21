@@ -37,3 +37,12 @@
 
 
 ### Replace Given, When and Then in the step definition with StepDefinition, so that the steps won't be GWT specific.
+
+### Using Playwright debug mode
+		Open the pwsh in the project folder (simply go to the project folder if file explorer and type pwsh in file path and hit enter)
+		powershell will open
+		Enter:
+			$env:PWDEBUG=1
+			dotnet test
+			 >>> if you want to run specific test then enter
+					dotnet test --filter "TextBox"
