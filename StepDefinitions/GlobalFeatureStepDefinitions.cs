@@ -1,6 +1,7 @@
 using PlayWrightSpecFlow.Drivers;
 using PlayWrightSpecFlow.Pages;
 using System;
+using System.Runtime.CompilerServices;
 using System.Security.Policy;
 using TechTalk.SpecFlow;
 
@@ -141,6 +142,13 @@ namespace PlayWrightSpecFlow.StepDefinitions
         {
             await _globalPage.VerifyWebTableHasText(locator, text);
         }
+
+        [StepDefinition(@"I click element ""([^""]*)"" to open New Tab/Window and verify Text ""([^""]*)"" in the new tab with locator""([^""]*)""")]
+        public async Task GivenIClickElementToOpenNewTabWindowAndVerifyTextInTheNewTabWithLocator(string locator1, string expectedTxt, string locator2)
+        {
+            await _globalPage.VerifyTextNewTab(locator1, locator2, expectedTxt);
+        }
+
 
 
 

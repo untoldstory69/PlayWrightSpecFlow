@@ -49,6 +49,17 @@ Scenario: HTML Table
 	Given I open the browser with URL "https://testpages.eviltester.com/styled/index.html" 
 	And I click "Table Test Page" button with locator "#tablestest"
 	And I verify the text "Alan" in the table with locator "#mytable"
+
+Scenario: Modal Dialogue
+	Given I open the browser with URL "https://demoqa.com/alertsWindows"
+	And I click "Modal Dialogue" button with locator "//span[normalize-space()='Modal Dialogs']"
+	And I click "Small Modal" button with locator "#showSmallModal"
+	And I verify message "This is a small modal. It has very less content" is shown on locator "//div[@class='modal-body']"
+
+Scenario: New Tab / Window 
+	Given I open the browser with URL "https://demoqa.com/browser-windows"
+	And I click element "#windowButton" to open New Tab/Window and verify Text "This is a sample page" in the new tab with locator"#sampleHeading"
+	
 	 
 
 	

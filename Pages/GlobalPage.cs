@@ -93,5 +93,17 @@ namespace PlayWrightSpecFlow.Pages
             // Verify text in the table
             await helper.VerifyTextInTable(_page, table, expectedTxt);
         }
+
+        public async Task VerifyTextNewTab(string locator1, string locator2, string expectedTxt)
+        {
+            var page2 = await _page.RunAndWaitForPopupAsync(async () =>
+            {
+                await _page.Locator(locator1).ClickAsync();
+            });
+            await Expect(page2.Locator(locator2)).ToContainTextAsync(expectedTxt);
+        }
+
+
+
     }
 }

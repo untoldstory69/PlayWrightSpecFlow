@@ -1,0 +1,83 @@
+{
+  "uuid": "9b9267af-c7e1-40bc-a8fa-4f2362424600",
+  "historyId": "8fa2a6310ba8b9e7e6e77a85e1548e00",
+  "testCaseId": "9b588d4067bd317b0667ef24fac1def4",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/New Tab",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "New Tab",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Locator expected to contain text 'This form is populated Dynamically when a 'Category' is selected.Submit the form to see the results page.'\nBut was: 'This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        ' \nCall log:\n  - LocatorAssertions.ToContainTextAsync with timeout 5000ms\n  - waiting for Locator(\"//p[contains(text(),'This form is populated Dynamically when a ')]\")\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"",
+    "trace": "Microsoft.Playwright.PlaywrightException: Locator expected to contain text 'This form is populated Dynamically when a 'Category' is selected.Submit the form to see the results page.'\nBut was: 'This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        ' \nCall log:\n  - LocatorAssertions.ToContainTextAsync with timeout 5000ms\n  - waiting for Locator(\"//p[contains(text(),'This form is populated Dynamically when a ')]\")\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyTextNewTab(String locator1, String locator2, String expectedTxt) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 103\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIClickElementToOpenNewTabAndVerifyTextInTheNewTabWithLocator(String locator1, String expectedTxt, String locator2) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 148\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://testpages.eviltester.com/styled/windows-test.html\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710982435567,
+      "stop": 1710982438233
+    },
+    {
+      "name": "And  I click element \"#gobasicajax\" to open New Tab and verify Text \"This form is populated Dynamically when a 'Category' is selected.Submit the form to see the results page.\" in the new tab with locator\"//p[contains(text(),'This form is populated Dynamically when a ')]\"",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Locator expected to contain text 'This form is populated Dynamically when a 'Category' is selected.Submit the form to see the results page.'\nBut was: 'This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        ' \nCall log:\n  - LocatorAssertions.ToContainTextAsync with timeout 5000ms\n  - waiting for Locator(\"//p[contains(text(),'This form is populated Dynamically when a ')]\")\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"",
+        "trace": "Microsoft.Playwright.PlaywrightException: Locator expected to contain text 'This form is populated Dynamically when a 'Category' is selected.Submit the form to see the results page.'\nBut was: 'This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        ' \nCall log:\n  - LocatorAssertions.ToContainTextAsync with timeout 5000ms\n  - waiting for Locator(\"//p[contains(text(),'This form is populated Dynamically when a ')]\")\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\n  -   locator resolved to <p>This form is populated Dynamically when a 'Catego…</p>\n  -   unexpected value \"This form is populated Dynamically when a 'Category' is selected.\n            Submit the form to see the results page.\n        \"\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 86\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 64\r\n   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 56\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyTextNewTab(String locator1, String locator2, String expectedTxt) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 103\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIClickElementToOpenNewTabAndVerifyTextInTheNewTabWithLocator(String locator1, String expectedTxt, String locator2) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 148\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710982438245,
+      "stop": 1710982444956
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestScreenShot",
+      "source": "5328042b-b7b2-44ed-b33c-936ee9b604a3-attachment.png",
+      "type": "image/png"
+    }
+  ],
+  "parameters": [],
+  "start": 1710982435549,
+  "stop": 1710982473685
+}
