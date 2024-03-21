@@ -5,6 +5,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace PlayWrightSpecFlow.Pages
 {
+    
     public class GlobalPage : PageTest
     {
         private IPage _page;
@@ -100,16 +101,21 @@ namespace PlayWrightSpecFlow.Pages
             {
                 await _page.Locator(locator1).ClickAsync();
             });
-            await Expect(page2.Locator(locator2)).ToContainTextAsync(expectedTxt);
+            await Expect(page2.Locator(locator2)).ToHaveTextAsync(expectedTxt);
         }
 
-        public async Task VerifyTextInIFrame(string iframe, string locator, string expectedTxt)
-        {
-            await Expect(_page.FrameLocator(iframe).Locator(locator)).ToContainTextAsync(expectedTxt);
-        }
+        public async Task VerifyTextInIFrame(string iframe, string locator, string expectedTxt)=> await Expect(_page.FrameLocator(iframe).Locator(locator)).ToHaveTextAsync(expectedTxt);
+        
 
         public async Task ClickElementIFrame(string iframe, string locator) => await _page.FrameLocator(iframe).Locator(locator).ClickAsync();
 
+        public async Task FillInAutoComplete(string locator, string text)
+        {
+
+            await _page.WaitForTimeoutAsync(5000);
+            await _page.Locator(locator).FillAsync(text);
+            await _page.Locator(locator).PressAsync("Enter");
+        }
 
 
     }

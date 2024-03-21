@@ -2,7 +2,7 @@
 
 This Featue files contains the global features used in web application
 
-@tag1
+
 Scenario: Input Field such as text field, text area
 	Given I open the browser with URL "https://demoqa.com/text-box"
 	And I fill in the input field "#userName" with the input value "the rock"
@@ -63,8 +63,14 @@ Scenario: New Tab / Window
 Scenario: IFrame
 	Given I open the browser with URL "https://testpages.eviltester.com/styled/index.html"
 	And I click "iFame Test" button with locator "#iframestest"
-	Then I verify text "Nested Page Example" in the iFrame "#theheaderhtml" with locator "//p[normalize-space()='This page is used in an iFrame.']"
+	Then I verify text "Nested Page Example" in the iFrame "#theheaderhtml" with locator "//h1[normalize-space()='Nested Page Example']"
 	And I click the element "Index" in the iFrame "#theheaderhtml" with locator "//a[normalize-space()='Index']"
+
+#Scenario: Autocomplete
+#	Given I open the browser with URL "https://demoqa.com/widgets"
+#	And I click "Auto Complete" button with locator "//div[@class='element-list collapse show']//li[@id='item-1']"
+	#And I fill in text "Blue" in the auto complete locator "#autoCompleteMultipleInput"
+	
 	 
 
 	

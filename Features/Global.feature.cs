@@ -75,11 +75,9 @@ namespace PlayWrightSpecFlow.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Input Field such as text field, text area")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
         public void InputFieldSuchAsTextFieldTextArea()
         {
-            string[] tagsOfScenario = new string[] {
-                    "tag1"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input Field such as text field, text area", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
@@ -428,7 +426,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 66
  testRunner.Then("I verify text \"Nested Page Example\" in the iFrame \"#theheaderhtml\" with locator \"" +
-                        "//p[normalize-space()=\'This page is used in an iFrame.\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                        "//h1[normalize-space()=\'Nested Page Example\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 67
  testRunner.And("I click the element \"Index\" in the iFrame \"#theheaderhtml\" with locator \"//a[norm" +

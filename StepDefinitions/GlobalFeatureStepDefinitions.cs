@@ -160,6 +160,11 @@ namespace PlayWrightSpecFlow.StepDefinitions
         {
             await _globalPage.ClickElementIFrame(iFrame, locator);
         }
+        [StepDefinition(@"I fill in text ""([^""]*)"" in the auto complete locator ""([^""]*)""")]
+        public async void GivenIFillInTextInTheAutoCompleteLocator(string text, string locator)
+        {
+            await _globalPage.FillInAutoComplete(locator, text);
+        }
 
 
 

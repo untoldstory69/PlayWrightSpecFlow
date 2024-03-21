@@ -1,0 +1,103 @@
+{
+  "uuid": "60195391-1fac-41be-8ff2-c3e99aa91bad",
+  "historyId": "549d4e2440f4bcd02592306e2ae91951",
+  "testCaseId": "c551415a854d3244e662a52ef641f141",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Modal Dialogue",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Modal Dialogue",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://demoqa.com/alertsWindows\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998417804,
+      "stop": 1710998420354
+    },
+    {
+      "name": "And  I click \"Modal Dialogue\" button with locator \"//span[normalize-space()='Modal Dialogs']\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998420355,
+      "stop": 1710998423326
+    },
+    {
+      "name": "And  I click \"Small Modal\" button with locator \"#showSmallModal\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998423326,
+      "stop": 1710998423493
+    },
+    {
+      "name": "And  I verify message \"This is a small modal. It has very less content\" is shown on locator \"//div[@class='modal-body']\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998423493,
+      "stop": 1710998423503
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710998417804,
+  "stop": 1710998423503
+}

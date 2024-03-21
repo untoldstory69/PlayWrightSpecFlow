@@ -1,0 +1,148 @@
+{
+  "uuid": "2e2a5513-8b90-497b-9607-5d7ea57ceb91",
+  "historyId": "7a1a15dcb5aa271da1a888822beec530",
+  "testCaseId": "bfd3cd1900915a7886bc7d3e96d2bf15",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Buttons",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Buttons",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://demoqa.com/buttons\" with window size \"1920\" * \"1080\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998359757,
+      "stop": 1710998369690
+    },
+    {
+      "name": "When  I click \"clickMe\" button with text \"Click Me\" of Nth \"2\" element",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998369690,
+      "stop": 1710998372591
+    },
+    {
+      "name": "Then  I verify message \"You have done a dynamic click\" is shown on locator \"#dynamicClickMessage\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998372591,
+      "stop": 1710998372626
+    },
+    {
+      "name": "When  I double click \"double click me\" button with locator \"#doubleClickBtn\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998372627,
+      "stop": 1710998373258
+    },
+    {
+      "name": "Then  I verify message \"You have done a double click\" is shown on locator \"#doubleClickMessage\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998373258,
+      "stop": 1710998373267
+    },
+    {
+      "name": "When  I right click \"Right Click Me\" button with locator \"#rightClickBtn\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998373267,
+      "stop": 1710998373354
+    },
+    {
+      "name": "Then  I verify message \"You have done a right click\" is shown on locator \"#rightClickMessage\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710998373354,
+      "stop": 1710998373369
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710998359757,
+  "stop": 1710998373369
+}

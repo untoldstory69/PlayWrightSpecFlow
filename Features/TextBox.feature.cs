@@ -109,14 +109,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("TextBox Submit User Details (failing this scennario intentionally for testing pur" +
-            "pose)")]
-        public void TextBoxSubmitUserDetailsFailingThisScennarioIntentionallyForTestingPurpose()
+        [NUnit.Framework.DescriptionAttribute("a TextBox Submit User Details (failing this scennario intentionally for testing p" +
+            "urpose)")]
+        public void ATextBoxSubmitUserDetailsFailingThisScennarioIntentionallyForTestingPurpose()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TextBox Submit User Details (failing this scennario intentionally for testing pur" +
-                    "pose)", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("a TextBox Submit User Details (failing this scennario intentionally for testing p" +
+                    "urpose)", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

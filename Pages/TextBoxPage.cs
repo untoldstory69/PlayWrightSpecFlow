@@ -3,6 +3,7 @@ using Microsoft.Playwright.NUnit;
 
 namespace PlayWrightSpecFlow.Pages
 {
+
     internal class TextBoxPage: PageTest
     {
         private readonly IPage _page;
