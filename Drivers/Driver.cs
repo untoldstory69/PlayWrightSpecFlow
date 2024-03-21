@@ -31,7 +31,7 @@ namespace PlayWrightSpecFlow.Drivers
             _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false,
-                SlowMo = 100
+                SlowMo = 10000
 
             });
             

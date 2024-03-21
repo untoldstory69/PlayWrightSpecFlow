@@ -121,9 +121,11 @@ namespace PlayWrightSpecFlow.Pages
             {
                 Console.WriteLine("Caught Exception", ex.ToString());
             }
-            
+
         }
 
+        public async Task SelectItemsFromDropDown(string locator, string item) => await _page.Locator(locator).SelectOptionAsync(item);
 
+       
     }
 }

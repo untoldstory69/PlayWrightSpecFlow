@@ -70,7 +70,11 @@ Scenario: Autocomplete
 	Given I open the browser with URL "https://demoqa.com/widgets"
 	And I click "Auto Complete" button with locator "//div[@class='element-list collapse show']//li[@id='item-1']"
 	And I fill in text "Blue" in the auto complete locator "#autoCompleteMultipleInput"
-	
+
+
+Scenario: Drop down
+	Given I open the browser with URL "https://testpages.eviltester.com/styled/basic-html-form-test.html"
+	And I select options "Drop Down Item 4" from the drop down menu with locator "//select[@name='dropdown']"
 	 
 
 	

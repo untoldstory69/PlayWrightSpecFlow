@@ -166,6 +166,11 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.FillInAutoComplete(locator, text);
         }
 
+        [StepDefinition(@"I select options ""([^""]*)"" from the drop down menu with locator ""([^""]*)""")]
+        public async Task GivenISelectOptionsFromTheDropDownMenuWithLocator(string option, string locator)
+        {
+            await _globalPage.SelectItemsFromDropDown(locator, option);
+        }
 
 
 
