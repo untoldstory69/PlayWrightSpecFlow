@@ -149,6 +149,19 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.VerifyTextNewTab(locator1, locator2, expectedTxt);
         }
 
+        [StepDefinition(@"I verify text ""([^""]*)"" in the iFrame ""([^""]*)"" with locator ""([^""]*)""")]
+        public async void ThenIVerifyTextInTheIFrameWithLocator(string text, string iFrame, string locator)
+        {
+            await _globalPage.VerifyTextInIFrame(iFrame, locator, text);
+        }
+
+        [StepDefinition(@"I click the element ""([^""]*)"" in the iFrame ""([^""]*)"" with locator ""([^""]*)""")]
+        public async Task ThenIClickTheElementInTheIFrameWithLocator(string element, string iFrame, string locator)
+        {
+            await _globalPage.ClickElementIFrame(iFrame, locator);
+        }
+
+
 
 
 

@@ -103,6 +103,13 @@ namespace PlayWrightSpecFlow.Pages
             await Expect(page2.Locator(locator2)).ToContainTextAsync(expectedTxt);
         }
 
+        public async Task VerifyTextInIFrame(string iframe, string locator, string expectedTxt)
+        {
+            await Expect(_page.FrameLocator(iframe).Locator(locator)).ToContainTextAsync(expectedTxt);
+        }
+
+        public async Task ClickElementIFrame(string iframe, string locator) => await _page.FrameLocator(iframe).Locator(locator).ClickAsync();
+
 
 
     }

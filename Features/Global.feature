@@ -60,6 +60,11 @@ Scenario: New Tab / Window
 	Given I open the browser with URL "https://demoqa.com/browser-windows"
 	And I click element "#windowButton" to open New Tab/Window and verify Text "This is a sample page" in the new tab with locator"#sampleHeading"
 	
+Scenario: IFrame
+	Given I open the browser with URL "https://testpages.eviltester.com/styled/index.html"
+	And I click "iFame Test" button with locator "#iframestest"
+	Then I verify text "Nested Page Example" in the iFrame "#theheaderhtml" with locator "//p[normalize-space()='This page is used in an iFrame.']"
+	And I click the element "Index" in the iFrame "#theheaderhtml" with locator "//a[normalize-space()='Index']"
 	 
 
 	
