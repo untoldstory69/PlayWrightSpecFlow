@@ -1,0 +1,83 @@
+{
+  "uuid": "589812d4-e32f-4206-b38b-083daa396efe",
+  "historyId": "2285216a7d9114d9175f5ee51a508c5a",
+  "testCaseId": "06fd977a7e88bb5b8d776eab9872101f",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Static HTML Table",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Static HTML Table",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Execution context was destroyed, most likely because of a navigation",
+    "trace": "Microsoft.Playwright.PlaywrightException: Execution context was destroyed, most likely because of a navigation\r\n   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206\r\n   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal)\r\n   at Microsoft.Playwright.Core.Frame.QuerySelectorAsync(String selector, FrameQuerySelectorOptions options) in /_/src/Playwright/Core/Frame.cs:line 781\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyWebTableHasText(String locator, String expectedTxt) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 91\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIVerifyTheTextInTheTableWithLocator(String text, String locator) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 142\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://testpages.eviltester.com/styled/tag/table.html\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710979186249,
+      "stop": 1710979188900
+    },
+    {
+      "name": "And  I verify the text \"Alan\" in the table with locator \"#mytable \"",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Execution context was destroyed, most likely because of a navigation",
+        "trace": "Microsoft.Playwright.PlaywrightException: Execution context was destroyed, most likely because of a navigation\r\n   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206\r\n   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal)\r\n   at Microsoft.Playwright.Core.Frame.QuerySelectorAsync(String selector, FrameQuerySelectorOptions options) in /_/src/Playwright/Core/Frame.cs:line 781\r\n   at PlayWrightSpecFlow.Pages.GlobalPage.VerifyWebTableHasText(String locator, String expectedTxt) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\Pages\\GlobalPage.cs:line 91\r\n   at PlayWrightSpecFlow.StepDefinitions.GlobalFeatureStepDefinitions.GivenIVerifyTheTextInTheTableWithLocator(String text, String locator) in C:\\Users\\kishor.sharma\\Source\\Repos\\PlayWrightSpecFlow\\StepDefinitions\\GlobalFeatureStepDefinitions.cs:line 142\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.<>c__DisplayClass2_0.<<InvokeBindingDelegateAsync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.<>c__DisplayClass1_0`1.<<RunSync>b__0>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()\r\n   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710979188911,
+      "stop": 1710979189784
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestScreenShot",
+      "source": "85a556b4-0ac4-4357-8b35-071063624f11-attachment.png",
+      "type": "image/png"
+    }
+  ],
+  "parameters": [],
+  "start": 1710979186237,
+  "stop": 1710979190253
+}

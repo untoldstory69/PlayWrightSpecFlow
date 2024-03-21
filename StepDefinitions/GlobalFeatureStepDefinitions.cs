@@ -136,6 +136,13 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.ClickCancelConfirmationAlert(locator);
         }
 
+        [StepDefinition(@"I verify the text ""([^""]*)"" in the table with locator ""([^""]*)""")]
+        public async Task GivenIVerifyTheTextInTheTableWithLocator(string text, string locator)
+        {
+            await _globalPage.VerifyWebTableHasText(locator, text);
+        }
+
+
 
 
 

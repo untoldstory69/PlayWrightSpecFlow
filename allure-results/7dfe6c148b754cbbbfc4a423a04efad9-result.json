@@ -1,0 +1,88 @@
+{
+  "uuid": "45882da1-e4cb-476e-9e92-d00af1849823",
+  "historyId": "2285216a7d9114d9175f5ee51a508c5a",
+  "testCaseId": "06fd977a7e88bb5b8d776eab9872101f",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Static HTML Table",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Static HTML Table",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://testpages.eviltester.com/styled/index.html\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710979995488,
+      "stop": 1710979998047
+    },
+    {
+      "name": "And  I click \"Table Test Page\" button with locator \"#tablestest\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710979998061,
+      "stop": 1710979999766
+    },
+    {
+      "name": "And  I verify the text \"Alan\" in the table with locator \"#mytable \"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710979999767,
+      "stop": 1710980000120
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710979995474,
+  "stop": 1710980000122
+}

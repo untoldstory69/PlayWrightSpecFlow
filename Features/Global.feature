@@ -44,6 +44,11 @@ Scenario: Alerts
 	And I click confirmation alert box "confirm" with locator "#confirmexample" and click OK with text (optional) ""
 	And I click confirmation alert box "confirm" with locator "#confirmexample" and click Cancel 
 	And I click confirmation alert box "Show Prompt Box" with locator "#promptexample" and click OK with text (optional) "I am test"
+
+Scenario: HTML Table
+	Given I open the browser with URL "https://testpages.eviltester.com/styled/index.html" 
+	And I click "Table Test Page" button with locator "#tablestest"
+	And I verify the text "Alan" in the table with locator "#mytable"
 	 
 
 	

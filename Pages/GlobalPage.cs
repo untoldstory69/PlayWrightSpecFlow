@@ -16,6 +16,8 @@ namespace PlayWrightSpecFlow.Pages
             //_email = _page.Locator("#userEmail");
         }
 
+        Helper helper = new Helper();
+
 
 
         public async Task FillInText(string txtLocator, string text) => await _page.Locator(txtLocator).FillAsync(text);
@@ -82,6 +84,14 @@ namespace PlayWrightSpecFlow.Pages
             await _page.Locator(locator).ClickAsync();
         }
 
+        public async Task VerifyWebTableHasText( string locator, string expectedTxt)
+        {
+            
+            // Find the table element
+            var table = await _page.QuerySelectorAsync(locator);
 
+            // Verify text in the table
+            await helper.VerifyTextInTable(_page, table, expectedTxt);
+        }
     }
 }

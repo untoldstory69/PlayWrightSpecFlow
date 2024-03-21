@@ -1,0 +1,73 @@
+{
+  "uuid": "4a8d1f74-fe37-481c-9f6e-2d83d8917a3e",
+  "historyId": "2285216a7d9114d9175f5ee51a508c5a",
+  "testCaseId": "06fd977a7e88bb5b8d776eab9872101f",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Static HTML Table",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "17"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Static HTML Table",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://testpages.eviltester.com/styled/tag/table.html\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710979276594,
+      "stop": 1710979279168
+    },
+    {
+      "name": "And  I verify the text \"Alan\" in the table with locator \"#mytable \"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1710979280961,
+      "stop": 1710979281076
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1710979271288,
+  "stop": 1710979281103
+}
