@@ -13,8 +13,10 @@ steps:
     version: '5.x'  # Specify the .NET SDK version (adjust as needed)
 
 - script: |
-    dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright CLI
-    dotnet tool install --global dotnet-reportgenerator-globaltool  # Install ReportGenerator
+    dotnet build
+    pwsh bin/Debug/netX/playwright.ps1 install --with-deps    
+    #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright CLI
+    #dotnet tool install --global dotnet-reportgenerator-globaltool  # Install ReportGenerator
   displayName: 'Install Playwright CLI and ReportGenerator'
 
 - script: |
