@@ -15,6 +15,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '5.x'  # Specify the .NET SDK version (adjust as needed)
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -33,12 +38,10 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'custom'
-    custom: 'pwsh bin/Debug/netX/playwright.ps1 install --with-deps'
-  displayName: 'install playwright'
+- script: |
+    dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright CLI
+    dotnet tool install --global dotnet-reportgenerator-globaltool  # Install ReportGenerator
+  displayName: 'Install Playwright CLI and ReportGenerator'
 
 - task: DotNetCoreCLI@2
   inputs:
@@ -52,3 +55,6 @@ steps:
     command: 'test'
     projects: '**/*.csproj'
     testRunTitle: 'Runnning test'
+
+
+
