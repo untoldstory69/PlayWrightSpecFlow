@@ -1,0 +1,193 @@
+{
+  "uuid": "61d24983-b56b-482b-a775-7d47ac0f5988",
+  "historyId": "a86455c71405a22b91eb655d093c87de",
+  "testCaseId": "d5bb04ced49969d47fc0423bfda10da8",
+  "fullName": "PlayWrightSpecFlow/Features/Global Feature/Submit form successfully",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Global Feature"
+    }
+  ],
+  "links": [],
+  "name": "Submit form successfully",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://practice-automation.com/\" with window size \"1920\" * \"1080\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064350477,
+      "stop": 1711064355986
+    },
+    {
+      "name": "When  I click \"Form Fields\" button with locator \"//a[normalize-space()='Form Fields']\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064356005,
+      "stop": 1711064368862
+    },
+    {
+      "name": "Then  I redirected to the next page with URL \"https://practice-automation.com/form-fields/\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368862,
+      "stop": 1711064368865
+    },
+    {
+      "name": "And  I fill \"test name\" in the input field \"Name\" with the locator \"#name\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368866,
+      "stop": 1711064368867
+    },
+    {
+      "name": "And  I check the element \"Milk\" with element locator \"#drink2\"in the checkbox",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368871,
+      "stop": 1711064368871
+    },
+    {
+      "name": "And  I check the radio button \"Yellow\" with the element locator \"#color3\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368871,
+      "stop": 1711064368871
+    },
+    {
+      "name": "And  I select options \"yes\" from the drop down menu with locator \"#siblings\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368871,
+      "stop": 1711064368872
+    },
+    {
+      "name": "And  I fill \"test@gmail.com\" in the input field \"Email \" with the locator \"#email\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368872,
+      "stop": 1711064368872
+    },
+    {
+      "name": "And  I fill \"here is message \" in the input field \"Message \" with the locator \"#message\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368872,
+      "stop": 1711064368872
+    },
+    {
+      "name": "And  I click button \"Submit\" with locator \"#submit-btn\" and verify alert message \"Message received!\"",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711064368872,
+      "stop": 1711064368872
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1711064350458,
+  "stop": 1711064368897
+}

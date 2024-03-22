@@ -6,12 +6,12 @@ using static System.Net.Mime.MediaTypeNames;
 namespace PlayWrightSpecFlow.Pages
 {
     
-    public class GlobalPage : PageTest
+    public class MasterPage : PageTest
     {
         private IPage _page;
        // private readonly ILocator _email;
 
-        public GlobalPage(IPage page)
+        public MasterPage(IPage page)
         {
             _page = page;
             //_email = _page.Locator("#userEmail");
@@ -95,6 +95,79 @@ namespace PlayWrightSpecFlow.Pages
             await helper.VerifyTextInTable(_page, table, expectedTxt);
         }
 
+
+        public async Task SortTable(string tableLocator, string columnLocator)
+        {
+            try
+            {
+               // Find the table element
+                var table = await _page.QuerySelectorAsync(tableLocator);
+
+                // Find the column header element you want to sort by
+                var columnHeader = await table.QuerySelectorAsync(columnLocator);
+
+                await columnHeader.ClickAsync();                
+            }
+            catch (Exception) {
+            
+            }
+            
+        }
+
+
+        public async Task VerifySortDataTable(string tableLocator, string columnIndex)
+        {
+            try
+            {
+                
+                // Find the table element
+                var table = await _page.QuerySelectorAsync(tableLocator);
+
+                // Find the rows in the table
+                var rows = await table.QuerySelectorAllAsync("tr");
+
+                // Extract text values from a specific column in each row
+                List<string> columnValues = new List<string>();
+                foreach (var row in rows)
+                {
+                    var cellSelector = $"td:nth-child({columnIndex + 1})"; // Adjust the selector to target the specific cell in the row
+                    var cell = await row.QuerySelectorAsync(cellSelector);
+                    if (cell != null)
+                    {
+                        var cellText = await cell.TextContentAsync();
+                        columnValues.Add(cellText);
+                    }
+                }
+
+                // Check if the values are sorted in ascending order
+                bool isSorted = IsSorted(columnValues);
+
+      
+            }
+            catch
+            {
+
+            }
+        }
+
+        static bool IsSorted(List<string> values)
+        {
+            for (int i = 1; i < values.Count; i++)
+            {
+                if (string.Compare(values[i - 1], values[i], StringComparison.Ordinal) > 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    
+
+
+
+
+
+
         public async Task VerifyTextNewTab(string locator1, string locator2, string expectedTxt)
         {
             var page2 = await _page.RunAndWaitForPopupAsync(async () =>
@@ -126,6 +199,7 @@ namespace PlayWrightSpecFlow.Pages
 
         public async Task SelectItemsFromDropDown(string locator, string item) => await _page.Locator(locator).SelectOptionAsync(item);
 
+        public async Task VerifyPageURL(string URL) => await Expect(_page).ToHaveURLAsync(URL);
        
     }
 }

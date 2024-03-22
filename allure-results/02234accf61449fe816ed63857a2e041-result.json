@@ -1,0 +1,103 @@
+{
+  "uuid": "7e2df7f1-1960-4e76-9e01-2ff4b34ddaa1",
+  "historyId": "bb39c5c1efd3427cef1fdbdf0c1249ad",
+  "testCaseId": "96102d3d625d676058326893b4a65c28",
+  "fullName": "PlayWrightSpecFlow/Features/Master Feature/HTML Table",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "Master Feature"
+    }
+  ],
+  "links": [],
+  "name": "HTML Table",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I open the browser with URL \"https://testpages.eviltester.com/styled/index.html\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711067972568,
+      "stop": 1711067976394
+    },
+    {
+      "name": "And  I click \"Table Test Page\" button with locator \"#tablestest\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711067976405,
+      "stop": 1711067978352
+    },
+    {
+      "name": "And  I verify the text \"Alan\" in the table with locator \"#mytable\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711067978352,
+      "stop": 1711067978599
+    },
+    {
+      "name": "And  I sort table with table locator \"#tablepress-1\" using column \"//*[@id='tablepress-1']/thead/tr/th[1]/text()\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1711067978599,
+      "stop": 1711067978606
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1711067972551,
+  "stop": 1711067978609
+}

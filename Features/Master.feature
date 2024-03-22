@@ -1,14 +1,14 @@
-﻿Feature: Global Feature
+﻿Feature: Master Feature
 
 This Featue files contains the global features used in web application
 
 
 Scenario: Input Field such as text field, text area
 	Given I open the browser with URL "https://demoqa.com/text-box"
-	And I fill in the input field "#userName" with the input value "the rock"
-	And I fill in the input field "#userEmail" with the input value "test@gmail.com"
-	And I fill in the input field "#currentAddress" with the input value "brisbane australia"
-	And I fill in the input field "#permanentAddress" with the input value "BNE Australia"
+	And I fill "the rock" in the input field "userName" with the locator "#userName"
+	And I fill "test@gmail.com" in the input field "userEmail" with the locator "#userEmail"
+	And I fill "brisbane australia" in the input field "currentAddress" with the locator "#currentAddress"
+	And I fill "Australia" in the input field "permanentAddress" with the locator "#permanentAddress"
 	When I click "Submit" button with locator "#submit"
 
 	
@@ -40,7 +40,7 @@ Scenario: Upload File
 
 Scenario: Alerts
 	Given I open the browser with URL "https://testpages.eviltester.com/styled/alerts/alert-test.html"
-	And I click alert button "Click Me" with locator "#alertexamples" and verify alert message "I am an alert box!"
+	And I click button "Click Me" with locator "#alertexamples" and verify alert message "I am an alert box!"
 	And I click confirmation alert box "confirm" with locator "#confirmexample" and click OK with text (optional) ""
 	And I click confirmation alert box "confirm" with locator "#confirmexample" and click Cancel 
 	And I click confirmation alert box "Show Prompt Box" with locator "#promptexample" and click OK with text (optional) "I am test"
@@ -49,6 +49,13 @@ Scenario: HTML Table
 	Given I open the browser with URL "https://testpages.eviltester.com/styled/index.html" 
 	And I click "Table Test Page" button with locator "#tablestest"
 	And I verify the text "Alan" in the table with locator "#mytable"
+
+Scenario: Sort Table
+	Given I open the browser with URL "https://practice-automation.com/tables/" 
+	And I sort table with table locator "#tablepress-1_wrapper" using column "th"
+	And I sort table with table locator "#tablepress-1_wrapper" using column "th"
+	And I verify column with column name and index "1" is sorted for table locator "#tablepress-1"
+
 
 Scenario: Modal Dialogue
 	Given I open the browser with URL "https://demoqa.com/alertsWindows"
@@ -75,6 +82,19 @@ Scenario: Autocomplete
 Scenario: Drop down
 	Given I open the browser with URL "https://testpages.eviltester.com/styled/basic-html-form-test.html"
 	And I select options "Drop Down Item 4" from the drop down menu with locator "//select[@name='dropdown']"
+
+
+Scenario: Submit form successfully
+	Given I open the browser with URL "https://practice-automation.com/" with window size "1920" * "1080"
+	When I click "Form Fields" button with locator "//a[normalize-space()='Form Fields']"
+	Then I redirected to the next page with URL "https://practice-automation.com/form-fields/"
+	And I fill "test name" in the input field "Name" with the locator "#name"
+	And I check the element "Milk" with element locator "#drink2"in the checkbox
+	And I check the radio button "Yellow" with the element locator "#color3"
+	And I select options "yes" from the drop down menu with locator "#siblings"
+	And I fill "test@gmail.com" in the input field "Email " with the locator "#email"
+	And I fill "here is message " in the input field "Message " with the locator "#message"
+	And I click button "Submit" with locator "#submit-btn" and verify alert message "Message received!"
 	 
 
 	

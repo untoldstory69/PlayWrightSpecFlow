@@ -20,22 +20,22 @@ namespace PlayWrightSpecFlow.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Global Feature")]
-    public partial class GlobalFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("Master Feature")]
+    public partial class MasterFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Global.feature"
+#line 1 "Master.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Global Feature", "This Featue files contains the global features used in web application", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Master Feature", "This Featue files contains the global features used in web application", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -94,18 +94,19 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I open the browser with URL \"https://demoqa.com/text-box\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.And("I fill in the input field \"#userName\" with the input value \"the rock\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill \"the rock\" in the input field \"userName\" with the locator \"#userName\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
- testRunner.And("I fill in the input field \"#userEmail\" with the input value \"test@gmail.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill \"test@gmail.com\" in the input field \"userEmail\" with the locator \"#userEma" +
+                        "il\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.And("I fill in the input field \"#currentAddress\" with the input value \"brisbane austra" +
-                        "lia\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill \"brisbane australia\" in the input field \"currentAddress\" with the locator " +
+                        "\"#currentAddress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
- testRunner.And("I fill in the input field \"#permanentAddress\" with the input value \"BNE Australia" +
-                        "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill \"Australia\" in the input field \"permanentAddress\" with the locator \"#perma" +
+                        "nentAddress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
  testRunner.When("I click \"Submit\" button with locator \"#submit\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -289,8 +290,8 @@ this.ScenarioInitialize(scenarioInfo);
                         "-test.html\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 43
- testRunner.And("I click alert button \"Click Me\" with locator \"#alertexamples\" and verify alert me" +
-                        "ssage \"I am an alert box!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click button \"Click Me\" with locator \"#alertexamples\" and verify alert message " +
+                        "\"I am an alert box!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 44
  testRunner.And("I click confirmation alert box \"confirm\" with locator \"#confirmexample\" and click" +
@@ -339,12 +340,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Modal Dialogue")]
-        public void ModalDialogue()
+        [NUnit.Framework.DescriptionAttribute("Sort Table")]
+        public void SortTable()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Modal Dialogue", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sort Table", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -356,16 +357,50 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 54
- testRunner.Given("I open the browser with URL \"https://demoqa.com/alertsWindows\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open the browser with URL \"https://practice-automation.com/tables/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 55
+ testRunner.And("I sort table with table locator \"#tablepress-1_wrapper\" using column \"th\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 56
+ testRunner.And("I sort table with table locator \"#tablepress-1_wrapper\" using column \"th\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 57
+ testRunner.And("I verify column with column name and index \"1\" is sorted for table locator \"#tabl" +
+                        "epress-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Modal Dialogue")]
+        public void ModalDialogue()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Modal Dialogue", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 60
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 61
+ testRunner.Given("I open the browser with URL \"https://demoqa.com/alertsWindows\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 62
  testRunner.And("I click \"Modal Dialogue\" button with locator \"//span[normalize-space()=\'Modal Dia" +
                         "logs\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 63
  testRunner.And("I click \"Small Modal\" button with locator \"#showSmallModal\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 64
  testRunner.And("I verify message \"This is a small modal. It has very less content\" is shown on lo" +
                         "cator \"//div[@class=\'modal-body\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -380,7 +415,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New Tab / Window", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 59
+#line 66
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -390,10 +425,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 60
+#line 67
  testRunner.Given("I open the browser with URL \"https://demoqa.com/browser-windows\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 61
+#line 68
  testRunner.And("I click element \"#windowButton\" to open New Tab/Window and verify Text \"This is a" +
                         " sample page\" in the new tab with locator\"#sampleHeading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -408,7 +443,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("IFrame", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 63
+#line 70
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -418,17 +453,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 64
+#line 71
  testRunner.Given("I open the browser with URL \"https://testpages.eviltester.com/styled/index.html\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 65
+#line 72
  testRunner.And("I click \"iFame Test\" button with locator \"#iframestest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 73
  testRunner.Then("I verify text \"Nested Page Example\" in the iFrame \"#theheaderhtml\" with locator \"" +
                         "//h1[normalize-space()=\'Nested Page Example\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 67
+#line 74
  testRunner.And("I click the element \"Index\" in the iFrame \"#theheaderhtml\" with locator \"//a[norm" +
                         "alize-space()=\'Index\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -443,7 +478,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Autocomplete", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 69
+#line 76
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -453,14 +488,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 70
+#line 77
  testRunner.Given("I open the browser with URL \"https://demoqa.com/widgets\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 71
+#line 78
  testRunner.And("I click \"Auto Complete\" button with locator \"//div[@class=\'element-list collapse " +
                         "show\']//li[@id=\'item-1\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 72
+#line 79
  testRunner.And("I fill in text \"Blue\" in the auto complete locator \"#autoCompleteMultipleInput\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -474,7 +509,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drop down", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 75
+#line 82
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -484,18 +519,68 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 76
+#line 83
  testRunner.Given("I open the browser with URL \"https://testpages.eviltester.com/styled/basic-html-f" +
                         "orm-test.html\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 77
+#line 84
  testRunner.And("I select options \"Drop Down Item 4\" from the drop down menu with locator \"//selec" +
                         "t[@name=\'dropdown\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 78
- testRunner.And("I select multiple options \"Selection Item 1\" \"Selection Item 2\" \"Selection Item 3" +
-                        "\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" from the menu with locator \"//select[@name=\'multipleselec" +
-                        "t[]\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Submit form successfully")]
+        public void SubmitFormSuccessfully()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit form successfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 87
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 88
+ testRunner.Given("I open the browser with URL \"https://practice-automation.com/\" with window size \"" +
+                        "1920\" * \"1080\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 89
+ testRunner.When("I click \"Form Fields\" button with locator \"//a[normalize-space()=\'Form Fields\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 90
+ testRunner.Then("I redirected to the next page with URL \"https://practice-automation.com/form-fiel" +
+                        "ds/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 91
+ testRunner.And("I fill \"test name\" in the input field \"Name\" with the locator \"#name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 92
+ testRunner.And("I check the element \"Milk\" with element locator \"#drink2\"in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 93
+ testRunner.And("I check the radio button \"Yellow\" with the element locator \"#color3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 94
+ testRunner.And("I select options \"yes\" from the drop down menu with locator \"#siblings\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 95
+ testRunner.And("I fill \"test@gmail.com\" in the input field \"Email \" with the locator \"#email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 96
+ testRunner.And("I fill \"here is message \" in the input field \"Message \" with the locator \"#messag" +
+                        "e\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 97
+ testRunner.And("I click button \"Submit\" with locator \"#submit-btn\" and verify alert message \"Mess" +
+                        "age received!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

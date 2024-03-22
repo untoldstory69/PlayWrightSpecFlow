@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using PlayWrightSpecFlow.Drivers;
 using PlayWrightSpecFlow.Pages;
 using System;
@@ -8,16 +9,16 @@ using TechTalk.SpecFlow;
 namespace PlayWrightSpecFlow.StepDefinitions
 {
     [Binding]
-    public class GlobalFeatureStepDefinitions
+    public class MasterFeatureStepDefinitions
     {
         private readonly Driver _driver;
-        private readonly GlobalPage _globalPage;
+        private readonly MasterPage _globalPage;
        
 
-        public GlobalFeatureStepDefinitions(Driver driver)
+        public MasterFeatureStepDefinitions(Driver driver)
         {
             _driver = driver;
-            _globalPage = new GlobalPage(_driver.Page);
+            _globalPage = new MasterPage(_driver.Page);
         }
 
         [StepDefinition(@"I open the browser with URL ""([^""]*)""")]
@@ -33,15 +34,22 @@ namespace PlayWrightSpecFlow.StepDefinitions
             _driver.Page.SetViewportSizeAsync(width, height);
         }
         
-        [StepDefinition(@"I fill in the input field ""([^""]*)"" with the input value ""([^""]*)""")]
-        public async Task GivenIFillInTheInputFieldWithTheInputValue(string locator, string value)
+  
+
+        [StepDefinition(@"I redirected to the next page with URL ""([^""]*)""")]
+        public async Task ThenIRedirectedToTheNextPageWithURL(string uRL)
         {
-            
-            await _globalPage.FillInText(locator, value);
+            await _globalPage.VerifyPageURL(uRL);
         }
 
-       
-      
+        [StepDefinition(@"I fill ""([^""]*)"" in the input field ""([^""]*)"" with the locator ""([^""]*)""")]
+        public async Task ThenIFillInTheInputFieldWithTheLocator(string inputValue, string inputField, string locator)
+        {
+            await _globalPage.FillInText(locator, inputValue);
+        }
+
+
+
         [StepDefinition(@"I click ""([^""]*)"" button with locator ""([^""]*)""")]
         public async Task GivenIClickButtonWithLocator(string buttonName, string btnLocator)
         {
@@ -118,8 +126,8 @@ namespace PlayWrightSpecFlow.StepDefinitions
             await _globalPage.UploadFile(fileName, locator);
         }
 
-        [StepDefinition(@"I click alert button ""([^""]*)"" with locator ""([^""]*)"" and verify alert message ""([^""]*)""")]
-        public async Task WhenIClickAlertButtonWithLocatorAndVerifyAlertMessage(string p0, string locator, string expectedMsg)
+        [StepDefinition(@"I click button ""([^""]*)"" with locator ""([^""]*)"" and verify alert message ""([^""]*)""")]
+        public async Task WhenIClickButtonWithLocatorAndVerifyAlertMessage(string p0, string locator, string expectedMsg)
         {
             await _globalPage.ClickAlertVerifyMsg(locator, expectedMsg);
         }
@@ -142,6 +150,22 @@ namespace PlayWrightSpecFlow.StepDefinitions
         {
             await _globalPage.VerifyWebTableHasText(locator, text);
         }
+
+
+        [StepDefinition(@"I sort table with table locator ""([^""]*)"" using column ""([^""]*)""")]
+        public async Task GivenISortTableWithTableLocatorUsingColumn(string tableLocator, string columnLocator)
+        {
+            await _globalPage.SortTable(tableLocator, columnLocator);
+        }
+
+        [StepDefinition(@"I verify column with column name and index ""([^""]*)"" is sorted for table locator ""([^""]*)""")]
+        public async void GivenIVerifyColumnWithColumnNameAndIndexIsSortedForTableLocator(string columnIndex, string tableLocator)
+        {
+            await _globalPage.VerifySortDataTable(tableLocator, columnIndex);   
+        }
+
+
+
 
         [StepDefinition(@"I click element ""([^""]*)"" to open New Tab/Window and verify Text ""([^""]*)"" in the new tab with locator""([^""]*)""")]
         public async Task GivenIClickElementToOpenNewTabWindowAndVerifyTextInTheNewTabWithLocator(string locator1, string expectedTxt, string locator2)
