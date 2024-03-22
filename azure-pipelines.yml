@@ -39,3 +39,4 @@ steps:
     projects: |
       dotnet build
       pwsh bin/Debug/netX/playwright.ps1 install --with-deps
+      dotnet test
