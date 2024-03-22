@@ -40,7 +40,8 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: |
-    dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
+    #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
+    dotnet add package Microsoft.Playwright.NUnit --version 1.42.0
   displayName: 'Install Playwright'
 
 - task: DotNetCoreCLI@2
