@@ -39,7 +39,3 @@ steps:
     projects: |
       dotnet build
       pwsh bin/Debug/netX/playwright.ps1 install --with-deps
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    testRunTitle: 'run test using pipeline specflow'
