@@ -37,7 +37,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'custom'
-    projects: '**/*.cpsroj'
+    projects: '$(Parameters.projects)'
     custom: 'pwsh bin/Debug/netX/playwright.ps1 install --with-deps'
   displayName: 'install playwright'
 
