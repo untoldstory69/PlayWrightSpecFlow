@@ -37,19 +37,19 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'custom'
-    projects: '$(Parameters.projects)'
+    projects: '**/*.csproj'
     custom: 'pwsh bin/Debug/netX/playwright.ps1 install --with-deps'
   displayName: 'install playwright'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    projects: '**/*.cpsroj'
+    projects: '**/*.csproj'
     feedsToUse: 'select'
   displayName: 'restore'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: '**/*.cpsroj'
+    projects: '**/*.csproj'
     testRunTitle: 'Runnning test'
