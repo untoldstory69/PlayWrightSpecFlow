@@ -7,36 +7,27 @@ pool:
   vmImage: 'windows-latest'  # Use Windows agent for Playwright
 
 steps:
-- task: UseDotNet@2
+- task: DotNetCoreCLI@2
   inputs:
-    packageType: 'sdk'
-    version: '5.x'  # Specify the .NET SDK version (adjust as needed)
-
-- script: |
-    dotnet build
-    pwsh bin/Debug/netX/playwright.ps1 install --with-deps    
-    #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright CLI
-    #dotnet tool install --global dotnet-reportgenerator-globaltool  # Install ReportGenerator
-  displayName: 'Install Playwright CLI and ReportGenerator'
-
-- script: |
-    cd /PlayWrightSpecFlow  # Navigate to your C# Playwright project directory
-    dotnet restore  # Restore dependencies
-    dotnet build  # Build project
-    dotnet test --logger trx --results-directory test-results  # Run tests and generate trx format report
-    reportgenerator "-reports:test-results\*.trx" "-targetdir:code-coverage" -reporttypes:HTML  # Generate HTML code coverage report
-  displayName: 'Build and Test'
-
-- task: PublishTestResults@2
+    command: 'build'
+    projects: '**/*.cpsroj'
+    arguments: 'dotnet build'
+  displayName: 'Build project'
+- task: DotNetCoreCLI@2
   inputs:
-    testResultsFormat: 'VSTest'
-    testResultsFiles: '**/*.trx'
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    mergeTestResults: true
-    testRunTitle: 'Playwright Tests'
-
-- task: PublishCodeCoverageResults@1
+    command: 'custom'
+    projects: '**/*.cpsroj'
+    custom: 'pwsh bin/Debug/netX/playwright.ps1 install --with-deps'
+  displayName: 'install playwright'
+- task: DotNetCoreCLI@2
   inputs:
-    codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/code-coverage/Cobertura.xml'
-    
+    command: 'restore'
+    projects: '**/*.cpsroj'
+    feedsToUse: 'select'
+  displayName: 'restore'
+  condition: 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/*.cpsroj'
+    testRunTitle: 'Runnning PlayWright'
