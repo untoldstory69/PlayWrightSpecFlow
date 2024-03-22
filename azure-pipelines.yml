@@ -1,45 +1,40 @@
-# ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting the full .NET Framework.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
-
 trigger:
-- main
+  branches:
+    include:
+      - main  # Trigger pipeline on changes to the main branch
 
 pool:
-  vmImage: 'windows-latest'
-
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  vmImage: 'windows-latest'  # Use Windows agent for Playwright
 
 steps:
-- task: NuGetToolInstaller@1
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '5.x'  # Specify the .NET SDK version (adjust as needed)
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    arguments: 'dotnet test'
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'restore'
-    feedsToUse: 'select'
-    includeNuGetOrg: false
+- script: |
+    dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright CLI
+    dotnet tool install --global dotnet-reportgenerator-globaltool  # Install ReportGenerator
+  displayName: 'Install Playwright CLI and ReportGenerator'
 
-- task: DotNetCoreCLI@2
+- script: |
+    cd /PlayWrightSpecFlow  # Navigate to your C# Playwright project directory
+    dotnet restore  # Restore dependencies
+    dotnet build  # Build project
+    dotnet test --logger trx --results-directory test-results  # Run tests and generate trx format report
+    reportgenerator "-reports:test-results\*.trx" "-targetdir:code-coverage" -reporttypes:HTML  # Generate HTML code coverage report
+  displayName: 'Build and Test'
+
+- task: PublishTestResults@2
   inputs:
-    command: 'custom'
-    projects: |
-      dotnet build
-      pwsh bin/Debug/netX/playwright.ps1 install --with-deps
-      dotnet test
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/*.trx'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    mergeTestResults: true
+    testRunTitle: 'Playwright Tests'
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/code-coverage/Cobertura.xml'
+    
