@@ -15,6 +15,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+
+- task: UseDotNet@2
+  inputs:
+   packageType: sdk
+   version: latest
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -34,7 +40,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: |
-    dotnet add package Microsoft.Playwright.NUnit  # Install Playwright 
+    dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
   displayName: 'Install Playwright'
 
 - task: DotNetCoreCLI@2
