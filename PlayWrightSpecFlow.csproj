@@ -14,7 +14,6 @@
     <PackageReference Include="Allure.SpecFlow" Version="2.11.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="Microsoft.Playwright.NUnit" Version="1.42.0" />
-    <PackageReference Include="PostSharp" Version="2024.0.6" />
     <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
     <PackageReference Include="nunit" Version="4.1.0" />
