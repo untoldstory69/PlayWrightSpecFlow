@@ -19,7 +19,7 @@ steps:
 - task: UseDotNet@2
   inputs:
    packageType: sdk
-   version: latest
+   version: 'latest'
 
 - task: NuGetToolInstaller@1
 
