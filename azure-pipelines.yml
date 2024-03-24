@@ -44,7 +44,11 @@ steps:
     dotnet add package Microsoft.Playwright.NUnit --version 1.42.0
   displayName: 'Install Playwright'
 
-- script: |
+steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
      pwsh bin/Release/net8.0/playwright.ps1 install --with-deps
   displayName: 'Install Browser'
 
