@@ -48,11 +48,6 @@ steps:
      pwsh bin/Release/net8.0/playwright.ps1 install --with-deps
   displayName: 'Install Browser'
 
- 
-displayName
-:
-'Install Playwright browsers'
-
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
