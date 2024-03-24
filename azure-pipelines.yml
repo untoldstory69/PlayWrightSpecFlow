@@ -64,7 +64,8 @@ steps:
     command: 'test'
     projects: '**/*.csproj'
     testRunTitle: 'Runnning test'
-   continueOnError: true
+  displayName: 'Runnint Test'
+  continueOnError: true
 
 - task: AzurePowerShell@2
   inputs:
