@@ -72,7 +72,7 @@ steps:
     script: |
       allure generate --clean
       allure report open
-  displayName: 'Generate Allure Report'
+    displayName: 'Generate Allure Report'
 
 - task: PublishBuildArtifacts@1
   inputs:
