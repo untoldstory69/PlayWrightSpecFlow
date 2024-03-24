@@ -65,5 +65,18 @@ steps:
     projects: '**/*.csproj'
     testRunTitle: 'Runnning test'
 
+- task: AzurePowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      allure generate --clean
+      allure report open
+  displayName: 'Generate Allure Report
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'allure-report'
+    artifactName: 'AllureReport'
+    publishLocation: 'Container'
+ 
 
