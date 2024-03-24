@@ -49,7 +49,7 @@ steps:
   inputs:
     targetType: filePath
     script: |
-     pwsh bin/Release/net8.0/playwright.ps1 install --with-deps
+     pwsh bin/Release/net6.0/playwright.ps1 install --with-deps
   displayName: 'Install Browser'
 
 - task: DotNetCoreCLI@2
