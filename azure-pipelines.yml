@@ -67,10 +67,10 @@ script: |
   displayName: 'Runnint Test'
   continueOnError: true
 
-  - script: |
-      allure generate --clean
-      allure report open
+- task: CmdLine@2
   displayName: 'Generate Allure Report'
+  inputs:
+    script: 'allure generate --clean'
 
 - task: PublishBuildArtifacts@1
   inputs:
