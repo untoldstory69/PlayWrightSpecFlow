@@ -48,7 +48,7 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: inline
- - script: |
+script: |
      pwsh bin/Release/net6.0/playwright.ps1 install --with-deps
   displayName: 'Install Browser'
 
@@ -67,10 +67,7 @@ steps:
   displayName: 'Runnint Test'
   continueOnError: true
 
-#- task: AzurePowerShell@2
-# inputs:
-#   targetType: 'inline'
-    script: |
+  - script: |
       allure generate --clean
       allure report open
   displayName: 'Generate Allure Report'
