@@ -52,7 +52,7 @@ steps:
 
 - powershell: |
     & "D:\a\1/allure/bin/allure.bat" --version
-   displayName: 'print allure version'
+  displayName: 'print allure version'
 
 
 - task: CmdLine@2
