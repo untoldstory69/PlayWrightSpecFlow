@@ -67,4 +67,5 @@ steps:
     allureVersion: 2.27.0
     testResultsDir: allure-results
   displayName: 'Publish Report'
+  condition: always()
 
