@@ -36,6 +36,11 @@ steps:
     echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
   displayName: 'Add Allure to PATH'
 
+- powershell: |
+    # Print current directory
+    Get-ChildItem -Path .
+  displayName: 'Print Current Directory
+
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
