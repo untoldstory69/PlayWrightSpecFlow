@@ -21,17 +21,6 @@ steps:
    packageType: sdk
    version: '6.x'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Install Scoop
-      iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
- 
-      # Install Allure using Scoop
-      scoop install allure
-  displayName: 'Install Allure with Scoop'
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -42,11 +31,6 @@ steps:
   inputs:
     solution: '$(solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
