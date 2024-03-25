@@ -46,6 +46,14 @@ steps:
     Get-ChildItem -Path .
   displayName: 'Print Current Directory'
 
+- powershell: |
+    $env:PATH
+  displayName: 'Print PATH Environment Variable'
+
+- powershell: |
+    & "C:\Windows\System32\allure" --version
+  displayName: 'Verify Allure Installation'
+
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
