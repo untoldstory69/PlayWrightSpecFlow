@@ -59,7 +59,7 @@ steps:
     feedsToUse: 'select'
   displayName: 'restore'
 
-steps:
+
 - script: choco install allure
   displayName: 'Install Allure'
 
