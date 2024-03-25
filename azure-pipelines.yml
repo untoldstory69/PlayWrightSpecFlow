@@ -25,6 +25,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
       # Install Scoop
       iwr -useb get.scoop.sh | iex
  
