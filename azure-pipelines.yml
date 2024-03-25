@@ -45,11 +45,6 @@ steps:
     $env:PATH
   displayName: 'Print PATH Environment Variable'
 
-- powershell: |
-    allure --version
-  displayName: 'print allure version'
-
-
 - task: CmdLine@2
   displayName: 'Generate Allure Report'
   inputs:
