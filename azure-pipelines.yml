@@ -38,7 +38,7 @@ steps:
 
 - powershell: |
     # Print current directory
-    Get-ChildItem -Path "~\scoop\apps\allure\2.27.0"
+    Get-ChildItem -Path "~\scoop\apps\allure\current"
   displayName: 'Print Allure Directory'
 
 - powershell: |
@@ -50,7 +50,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $env:PATH += "C:\Users\VssAdministrator\scoop\apps\allure\bin"
+      $env:PATH += "C:\Users\VssAdministrator\scoop\apps\allure\current\bin"
       allure --version
 
 
