@@ -43,7 +43,7 @@ steps:
 
 
 - powershell: |
-    Get-ChildItem -Path C:\ -Recurse -Filter allure.bat
+    Get-ChildItem -Path "C:\Program Files", "C:\Program Files (x86)" -Recurse -Filter allure.bat
   displayName: 'Search for Allure Executable'
 
 - task: PowerShell@2
