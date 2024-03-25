@@ -41,6 +41,11 @@ steps:
     Get-ChildItem -Path .
   displayName: 'Print Current Directory'
 
+
+- powershell: |
+    Get-ChildItem -Path C:\ -Recurse -Filter allure.bat
+  displayName: 'Search for Allure Executable'
+
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
