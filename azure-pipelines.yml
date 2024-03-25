@@ -59,9 +59,16 @@ steps:
     feedsToUse: 'select'
   displayName: 'restore'
 
+steps:
+- script: choco install allure
+  displayName: 'Install Allure'
+
 - script: |
     echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
   displayName: 'Add Allure to PATH'
+
+- script: allure --version
+  displayName: 'Verify Allure Installation'
 
 - task: CmdLine@2
   displayName: 'Generate Allure Report'
