@@ -38,13 +38,13 @@ steps:
 
 - powershell: |
     # Print current directory
-    Get-ChildItem -Path .
+    Get-ChildItem -Path "~\scoop\apps\allure\"
   displayName: 'Print Current Directory'
 
-
 - powershell: |
-    Get-ChildItem -Path "C:\Program Files", "C:\Program Files (x86)" -Recurse -Filter allure.bat
-  displayName: 'Search for Allure Executable'
+    # Print current directory
+    Get-ChildItem -Path .
+  displayName: 'Print App Directory'
 
 - task: PowerShell@2
   inputs:
