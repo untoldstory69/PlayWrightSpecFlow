@@ -42,16 +42,11 @@ steps:
   displayName: 'Print Allure Directory'
 
 - powershell: |
-    # Print current directory
-    Get-ChildItem -Path .
-  displayName: 'Print Current Directory'
-
-- powershell: |
     $env:PATH
   displayName: 'Print PATH Environment Variable'
 
 - powershell: |
-    & "D:\a\1/allure/bin/allure.bat" --version
+    allure --version
   displayName: 'print allure version'
 
 
