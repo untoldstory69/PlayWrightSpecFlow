@@ -67,9 +67,9 @@ steps:
   displayName: 'Runnint Test'
   continueOnError: true
 
-- task: AzurePowerShell@2
-  inputs:
-    targetType: 'inline'
+#- task: AzurePowerShell@2
+# inputs:
+#   targetType: 'inline'
     script: |
       allure generate --clean
       allure report open
