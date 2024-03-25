@@ -40,6 +40,26 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: |
+    # Install Scoop
+    iwr -useb get.scoop.sh | iex
+ 
+    # Install Allure using Scoop
+    scoop install allure
+  displayName: 'Install Allure with Scoop'
+
+- script: |
+    echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
+  displayName: 'Add Allure to PATH'
+
+- script: allure --version
+  displayName: 'Verify Allure Installation'
+
+- task: CmdLine@2
+  displayName: 'Generate Allure Report'
+  inputs:
+    script: 'allure generate --clean'
+
+- script: |
     #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
     dotnet add package Microsoft.Playwright.NUnit --version 1.42.0
   displayName: 'Install Playwright'
@@ -58,22 +78,6 @@ steps:
     projects: '**/*.csproj'
     feedsToUse: 'select'
   displayName: 'restore'
-
-
-- script: choco install allure
-  displayName: 'Install Allure'
-
-- script: |
-    echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
-  displayName: 'Add Allure to PATH'
-
-- script: allure --version
-  displayName: 'Verify Allure Installation'
-
-- task: CmdLine@2
-  displayName: 'Generate Allure Report'
-  inputs:
-    script: 'allure generate --clean'
 
 - task: DotNetCoreCLI@2
   inputs:
