@@ -59,6 +59,15 @@ steps:
     feedsToUse: 'select'
   displayName: 'restore'
 
+  - script: |
+    echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
+  displayName: 'Add Allure to PATH'
+
+- task: CmdLine@2
+  displayName: 'Generate Allure Report'
+  inputs:
+    script: 'allure generate --clean'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
