@@ -36,12 +36,12 @@ steps:
     echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
   displayName: 'Add Allure to PATH'
 
-- task: CmdLine@2
+- task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
+      $env:PATH += ";C:\path\to\allure\bin"
       allure --version
-  displayName: 'Verify Allure Installation'
 
 
 - task: CmdLine@2
