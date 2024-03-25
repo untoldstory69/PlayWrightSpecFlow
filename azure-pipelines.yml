@@ -32,24 +32,6 @@ steps:
       scoop install allure
   displayName: 'Install Allure with Scoop'
 
-- script: |
-    echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
-  displayName: 'Add Allure to PATH'
-
-- powershell: |
-    # Print current directory
-    Get-ChildItem -Path "~\scoop\apps\allure\current"
-  displayName: 'Print Allure Directory'
-
-- powershell: |
-    $env:PATH
-  displayName: 'Print PATH Environment Variable'
-
-- task: CmdLine@2
-  displayName: 'Generate Allure Report'
-  inputs:
-    script: 'allure generate --clean'
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -67,8 +49,6 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-
 
 - script: |
     #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
@@ -98,15 +78,9 @@ steps:
   displayName: 'Runnint Test'
   continueOnError: true
 
-- task: CmdLine@2
-  displayName: 'Generate Allure Report'
-  inputs:
-    script: 'allure generate --clean'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: 'allure-report'
-    artifactName: 'AllureReport'
-    publishLocation: 'Container'
- 
+ - task: PublishAllureReport@1
+    displayName: Publish Report
+    inputs:
+      allureVersion: 2.27.0
+      testResultsDir: allure-results
 
