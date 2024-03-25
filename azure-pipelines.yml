@@ -13,7 +13,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  projectName:'$(SYSTEM_TEAMPROJECT)'
 
 steps:
 
@@ -66,7 +65,7 @@ steps:
 - task:  PublishAllureReport@1
   inputs:
     allureVersion: 2.27.0
-    testResultsDir: $(System.DefaultWorkingDirectory)/$(projectName)/bin/$(buildConfiguration)/net6.0/allure-results
+    testResultsDir: $(System.DefaultWorkingDirectory)/$(SYSTEM_TEAMPROJECT)/bin/$(buildConfiguration)/net6.0/allure-results
   displayName: 'Publish Report'
   condition: always()
 
