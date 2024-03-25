@@ -38,13 +38,13 @@ steps:
 
 - powershell: |
     # Print current directory
-    Get-ChildItem -Path "~\scoop\apps\allure\"
+    Get-ChildItem -Path "~\scoop\apps\allure\current"
   displayName: 'Print Current Directory'
 
 - powershell: |
     # Print current directory
     Get-ChildItem -Path .
-  displayName: 'Print App Directory'
+  displayName: 'Print Current Directory'
 
 - task: PowerShell@2
   inputs:
