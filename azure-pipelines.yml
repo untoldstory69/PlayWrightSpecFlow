@@ -59,7 +59,7 @@ steps:
     feedsToUse: 'select'
   displayName: 'restore'
 
-  - script: |
+- script: |
     echo "##vso[task.prependpath]$(Pipeline.Workspace)/allure/bin"
   displayName: 'Add Allure to PATH'
 
