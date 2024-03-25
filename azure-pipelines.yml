@@ -21,15 +21,12 @@ steps:
    packageType: sdk
    version: '6.x'
 
-- task: PowerShell@2
-  inputs:
-    targetType: inline
-     script: |
+- script: |
     # Install Scoop
-        iwr -useb get.scoop.sh | iex
+    curl -Ls "https://get.scoop.sh" | Invoke-Expression
  
     # Install Allure using Scoop
-        scoop install allure
+    scoop install allure
   displayName: 'Install Allure with Scoop'
 
 - script: |
