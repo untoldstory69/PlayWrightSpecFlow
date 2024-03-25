@@ -39,7 +39,7 @@ steps:
 - powershell: |
     # Print current directory
     Get-ChildItem -Path .
-  displayName: 'Print Current Directory
+  displayName: 'Print Current Directory'
 
 - task: PowerShell@2
   inputs:
