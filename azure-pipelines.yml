@@ -27,7 +27,7 @@ steps:
     script: |
       Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
       # Install Scoop
-      iwr -useb get.scoop.sh | iex -RunAsAdmin
+      iwr -useb get.scoop.sh | "iex -RunAsAdmin"
  
       # Install Allure using Scoop
       scoop install allure
