@@ -46,6 +46,14 @@ steps:
       scoop install allure
   displayName: 'Install Allure with Scoop'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'add'
+    projects: '**/*.csproj'  # Path to your project file
+    packageDirectory: '$(Build.SourcesDirectory)/packages'  # Directory to restore packages
+    arguments: 'package Microsoft.Allure.NUnit'  # Specify the version of the Allure package
+  displayName: 'Install Allure Nunit Package'
+
 - script: |
     #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
     dotnet add package Microsoft.Playwright.NUnit --version 1.42.0
