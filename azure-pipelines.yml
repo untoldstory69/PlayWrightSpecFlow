@@ -50,7 +50,7 @@ steps:
 
 - script: |
     #Install Allure Nunit
-    dotnet add package Microsoft.Allure.NUnit
+    dotnet add package Microsoft.Allure.NUnit --version 1.2.1.1
   displayName: 'Install Allure NUnit'
 
 
