@@ -30,13 +30,13 @@ steps:
     Contents: '**\bin\$(BuildConfiguration)\**'
     TargetFolder: '$(build.artifactstagingdirectory)'
     condition: succeededOrFailed()
- displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     condition: succeededOrFailed()
- displayName: 'Publish Artifact: drop'
+  displayName: 'Publish Artifact: drop'
 
 - task: NuGetCommand@2
   inputs:
