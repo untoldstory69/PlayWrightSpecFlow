@@ -24,20 +24,6 @@ steps:
 
 - task: NuGetToolInstaller@1
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\bin\$(BuildConfiguration)\**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-    condition: succeededOrFailed()
-  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    condition: succeededOrFailed()
-  displayName: 'Publish Artifact: drop'
-
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
@@ -102,3 +88,16 @@ steps:
   displayName: 'Publish Report'
   condition: always()
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: '**\bin\$(BuildConfiguration)\**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    condition: succeededOrFailed()
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    condition: succeededOrFailed()
+  displayName: 'Publish Artifact: drop'
