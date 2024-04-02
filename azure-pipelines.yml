@@ -46,14 +46,6 @@ steps:
       scoop install allure
   displayName: 'Install Allure with Scoop'
 
-
-
-- script: |
-    #Install Allure Nunit
-    dotnet add package Microsoft.Allure.NUnit --version 1.2.1.1
-  displayName: 'Install Allure NUnit'
-
-
 - script: |
     #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
     dotnet add package Microsoft.Playwright.NUnit --version 1.42.0
@@ -83,9 +75,10 @@ steps:
   displayName: 'Running Test'
  # continueOnError: true
 
-- script: |
-    #generate allure report 
-    allure generate --clean
+- task: AllureGenerate@1
+  inputs:
+    resultsDir: $(System.DefaultWorkingDirectory)/allure-results
+    targetDir: $(System.DefaultWorkingDirectory/allure-report/$(Build.BuildNumber)
   displayName: 'Generate allure report'
   condition: always()
    
