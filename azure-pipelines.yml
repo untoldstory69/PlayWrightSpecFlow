@@ -93,11 +93,11 @@ steps:
     SourceFolder: '$(system.defaultworkingdirectory)'
     Contents: '**\bin\$(BuildConfiguration)\**'
     TargetFolder: '$(build.artifactstagingdirectory)'
-    condition: succeededOrFailed()
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  condition: always()
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
-    condition: succeededOrFailed()
   displayName: 'Publish Artifact: drop'
+  condition: always()
