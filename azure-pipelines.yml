@@ -63,6 +63,14 @@ steps:
     testRunTitle: 'Runnning test'
   displayName: 'Running Test'
  # continueOnError: true
+
+ - task: PublishTestPlanResults@1
+  inputs:
+    testPlan: 'Test Plan 01'
+    testResultFormat: xUnit
+    testResultFiles: $(Build.StagingDirectory)/testResults.xml
+    testCaseMatchingStrategy: property
+    testCaseProperty: TestId
    
 - task: CopyFiles@2
   inputs:
