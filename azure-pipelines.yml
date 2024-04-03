@@ -64,7 +64,7 @@ steps:
   displayName: 'Running Test'
  # continueOnError: true
 
- - task: PublishTestPlanResults@1
+- task: PublishTestPlanResults@1
   inputs:
     testPlan: 'Test Plan 01'
     testResultFormat: xUnit
