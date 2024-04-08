@@ -67,7 +67,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\bin\$(BuildConfiguration)\**'
+    Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   condition: always()
