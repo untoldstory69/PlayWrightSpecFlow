@@ -85,7 +85,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\bin\$(BuildConfiguration)\**'
+    Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   condition: always()
@@ -93,5 +93,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
-  displayName: 'Publish Artifact: drop'
+  displayName: 'Publish Artifact: TestArtifact'
   condition: always()
