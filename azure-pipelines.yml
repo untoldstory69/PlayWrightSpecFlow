@@ -75,13 +75,6 @@ steps:
   displayName: 'Running Test'
  # continueOnError: true
 
-- task:  PublishAllureReport@1
-  inputs:
-    allureVersion: 2.27.0
-    testResultsDir: allure-results
-  displayName: 'Publish Report'
-  condition: always()
-  
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
@@ -94,4 +87,11 @@ steps:
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
   displayName: 'Publish Artifact: TestArtifact'
+  condition: always()
+
+- task:  PublishAllureReport@1
+  inputs:
+    allureVersion: 2.27.0
+    testResultsDir: allure-results
+  displayName: 'Publish Report'
   condition: always()
