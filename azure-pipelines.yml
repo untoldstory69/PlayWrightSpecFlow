@@ -75,7 +75,7 @@ steps:
   displayName: 'Running Test'
  # continueOnError: true
 
- - task:  PublishAllureReport@1
+- task:  PublishAllureReport@1
   inputs:
     allureVersion: 2.27.0
     testResultsDir: allure-results
