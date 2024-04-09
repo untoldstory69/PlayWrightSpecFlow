@@ -92,6 +92,6 @@ steps:
 - task:  PublishAllureReport@1
   inputs:
     allureVersion: 2.27.0
-    testResultsDir: $(build.artifactstagingdirectory)/drop/bin/Debug/net6.0/allure-results
+    testResultsDir: $(build.artifactstagingdirectory)/#/32506501/drop/bin/Debug/net6.0/allure-results
   displayName: 'Publish Report'
   condition: always()
