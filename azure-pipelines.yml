@@ -75,5 +75,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
-  displayName: 'Publish Artifact: drop'
+  displayName: 'Publish Artifact: TestArtifact'
   condition: always()
