@@ -28,17 +28,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Install Scoop
-      iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
- 
-      # Install Allure using Scoop
-      scoop install allure
-  displayName: 'Install Allure with Scoop'
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -47,19 +36,16 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: |
-    #dotnet tool install --global Microsoft.Playwright.CLI  # Install Playwright 
     dotnet add package Microsoft.Playwright.NUnit --version 1.42.0
   displayName: 'Install Playwright'
-
-
+  
 - task: PowerShell@2
   inputs:
     targetType: inline
     script: |
      pwsh bin/Release/net6.0/playwright.ps1 install --with-deps
   displayName: 'Install Browser'
-
-
+  
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
@@ -93,6 +79,6 @@ steps:
 - task:  PublishAllureReport@1
   inputs:
     allureVersion: 2.27.0
-    testResultsDir: '$(System.DefaultWorkingDirectory)/$(projectName)/bin/Debug/net6.0/allure-results'
+    testResultsDir: '$(System.DefaultWorkingDirectory)/$(projectName)/TestBuildArtifact/bin/Debug/net6.0/allure-results'
   displayName: 'Publish Allure Report'
   condition: always()
