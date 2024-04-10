@@ -76,17 +76,17 @@ steps:
   displayName: 'Publish Artifact: TestArtifact'
   condition: always()
 
-steps:
+
 - script: |
     dir /b /s $(System.DefaultWorkingDirectory)
   displayName: 'List Contents of Directory'
 
-steps:
+
 - script: |
     dir /b /s $(build.artifactstagingdirectory)/$(projectName)/TestBuildArtifact/bin/Debug/net6.0
   displayName: 'List Contents of Directory'
 
-steps:
+
 - script: |
     dir /b /s D:\a\1\s\PlayWrightSpecflowDemo\TestBuildArtifact\bin\Debug\net6.0\
   displayName: 'List Contents of Directory'
