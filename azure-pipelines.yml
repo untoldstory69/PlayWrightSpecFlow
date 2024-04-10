@@ -75,13 +75,6 @@ steps:
   displayName: 'Running Test'
  # continueOnError: true
 
-- task:  PublishAllureReport@1
-  inputs:
-    allureVersion: 2.27.0
-    testResultsDir: '$(System.DefaultWorkingDirectory)/$(projectName)/bin/Debug/net6.0/allure-results'
-  displayName: 'Publish Allure Report'
-  condition: always()
-
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
@@ -97,3 +90,9 @@ steps:
   displayName: 'Publish Artifact: TestArtifact'
   condition: always()
 
+- task:  PublishAllureReport@1
+  inputs:
+    allureVersion: 2.27.0
+    testResultsDir: '$(System.DefaultWorkingDirectory)/$(projectName)/bin/Debug/net6.0/allure-results'
+  displayName: 'Publish Allure Report'
+  condition: always()
