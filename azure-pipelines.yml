@@ -90,11 +90,6 @@ steps:
   displayName: 'Publish Artifact: TestArtifact'
   condition: always()
 
-- script: |
-    
-    echo Current directory: $(Build.SourcesDirectory)
-  displayName: 'Print Current Directory'
-
 - task:  PublishAllureReport@1
   inputs:
     allureVersion: 2.27.0
