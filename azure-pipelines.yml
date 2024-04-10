@@ -13,7 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  projectName: '$(SYSTEM_TEAMPROJECT)'
+  projectName: 'PlayWrightSpecflowDemo'
 
 steps:
 
