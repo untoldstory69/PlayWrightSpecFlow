@@ -79,6 +79,6 @@ steps:
 - task:  PublishAllureReport@1
   inputs:
     allureVersion: 2.27.0
-    testResultsDir: '$(System.DefaultWorkingDirectory)/$(projectName)/TestBuildArtifact/bin/Debug/net6.0/allure-results'
+    testResultsDir: '$(build.artifactstagingdirectory)/$(projectName)/TestBuildArtifact/bin/Debug/net6.0/allure-results'
   displayName: 'Publish Allure Report'
   condition: always()
