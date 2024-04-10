@@ -62,7 +62,15 @@ steps:
     projects: '**/*.csproj'
     testRunTitle: 'Runnning test'
   displayName: 'Running Test'
- # continueOnError: true
+  condition: always()
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/*.csproj'
+    testRunTitle: 'Runnning test'
+  displayName: 'Running Test1'
+ condition: always()
 
 - task: CopyFiles@2
   inputs:
