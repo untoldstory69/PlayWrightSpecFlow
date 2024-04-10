@@ -15,6 +15,9 @@ variables:
   buildConfiguration: 'Release'
   projectName: 'PlayWrightSpecflowDemo'
 
+strategy: 
+  parallel: 2
+
 steps:
 
 - task: UseDotNet@2
