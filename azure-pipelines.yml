@@ -82,20 +82,9 @@ steps:
   displayName: 'List Contents of Directory'
   condition: always()
 
-
-- script: |
-    dir /b /s $(build.artifactstagingdirectory)/$(projectName)/TestBuildArtifact/bin/Debug/net6.0
-  displayName: 'List Contents of Directory'
-  condition: always()
-
-- script: |
-    dir /b /s D:\a\1\s\PlayWrightSpecflowDemo\TestBuildArtifact\bin\Debug\net6.0\
-  displayName: 'List Contents of Directory'
-  condition: always()
-
 - task:  PublishAllureReport@1
   inputs:
     allureVersion: 2.27.0
-    testResultsDir: 'D:\a\1\s\bin\Debug\net6.0\allure-results'
+    testResultsDir: '$(System.DefaultWorkingDirectory)\bin\Debug\net6.0\allure-results'
   displayName: 'Publish Allure Report'
   condition: always()
