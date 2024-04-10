@@ -70,7 +70,7 @@ steps:
     projects: '**/*.csproj'
     testRunTitle: 'Runnning test'
   displayName: 'Running Test1'
- condition: always()
+  condition: always()
 
 - task: CopyFiles@2
   inputs:
