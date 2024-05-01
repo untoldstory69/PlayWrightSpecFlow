@@ -26,6 +26,8 @@
 		Add allure.config under bin/debug/netx Folder
 
 		Generate result  using following command
+  			allure generate --single-file
+     				>>> generate single file
 			allure generate
 
 		allure serve
