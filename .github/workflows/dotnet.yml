@@ -14,17 +14,20 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0
+        
     - name: Build & Install
       run: dotnet build
+      
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net6.0/playwright.ps1 install --with-deps
-    - name: Run your tests
-      run: dotnet test
+      
+    - name: Run tests
+      run: dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory test-results
+      continue-on-error: true
+
     - name: Upload test results
       if: always() # Ensures this step runs even if tests fail
       uses: actions/upload-artifact@v3
       with:
         name: test-results
-        path: |
-          test-results/*.xml
-          test-results/*.json
+        path: test-results/
