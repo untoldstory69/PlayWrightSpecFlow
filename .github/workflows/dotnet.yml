@@ -22,11 +22,11 @@ jobs:
         dotnet-version: 8.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
     - name: Install PlayWright
       run: dotnet add package Microsoft.Playwright.NUnit --version 1.42.0
     - name: Install Browser
-      run: pwsh bin/Release/net6.0/playwright.ps1 install --with-deps
+      run: pwsh playwright.ps1 install --with-deps
+    - name: Build
+      run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
