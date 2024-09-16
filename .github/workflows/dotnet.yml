@@ -25,9 +25,21 @@ jobs:
       run: dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory test-results
       continue-on-error: true
 
+    - name: Install trx2html
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y npm
+        sudo npm install -g trx2html
+
+    - name: Convert TRX to HTML
+      run: |
+        trx2html test-results/test-results.trx --output test-results/test-results.html
+
     - name: Upload test results
       if: always() # Ensures this step runs even if tests fail
       uses: actions/upload-artifact@v3
       with:
         name: test-results
-        path: test-results/
+        path: |
+          test-results/test-results.trx
+          test-results/test-results.html
