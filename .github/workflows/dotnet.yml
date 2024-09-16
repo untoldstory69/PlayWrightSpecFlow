@@ -20,3 +20,9 @@ jobs:
       run: pwsh bin/Debug/net6.0/playwright.ps1 install --with-deps
     - name: Run your tests
       run: dotnet test
+    - name: Allure report
+      uses: afiore/action-allure-report@v0.1.0
+      with:
+          results-dir: allure-results
+          report-dir: allure-reoprt
+          
