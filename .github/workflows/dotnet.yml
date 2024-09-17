@@ -25,12 +25,11 @@ jobs:
       run: dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory test-results
       continue-on-error: true
 
-    - name: Generate HTML report with trx2html
-      uses: docker://node:18
-       with:
-        entrypoint: /bin/sh
-        args: -c "npm install -g trx2html && trx2html -i /test-results/test-results.trx -o /report/index.html"
-      working-directory: ${{ github.workspace }}
+    - name: Install ReportGenerator
+      run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+    - name: Generate HTML report
+      run: reportgenerator -reports:test-results/test-results.trx -targetdir:report -reporttypes:Html
 
     - name: Upload HTML report
       if: always()
