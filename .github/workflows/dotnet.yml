@@ -57,9 +57,10 @@ jobs:
         name: allure-report
         path: allure-report
 
+     # Upload screenshots taken during failed steps
     - name: Upload screenshots
       if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: failedTest
-        path: bin/Debug/net6.0/screenShot
+        name: failedTestScreenshots
+        path: screenShot
