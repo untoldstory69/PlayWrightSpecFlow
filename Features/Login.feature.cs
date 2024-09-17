@@ -76,10 +76,12 @@ namespace PlayWrightSpecFlow.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User should be successfully login")]
         [NUnit.Framework.CategoryAttribute("tag1")]
+        [NUnit.Framework.CategoryAttribute("TestCase=1234")]
         public void UserShouldBeSuccessfullyLogin()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "tag1",
+                    "TestCase=1234"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User should be successfully login", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6

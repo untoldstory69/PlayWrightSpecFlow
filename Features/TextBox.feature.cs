@@ -75,11 +75,9 @@ namespace PlayWrightSpecFlow.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("TextBox Submit User Details")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
         public void TextBoxSubmitUserDetails()
         {
-            string[] tagsOfScenario = new string[] {
-                    "tag1"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TextBox Submit User Details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6

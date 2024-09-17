@@ -52,3 +52,6 @@
 ### Integration with azure pipelines
 	Once the configuration is done in azure pipelines, we need to add azure-pipelines.yml file.
 	To have a allure report, we need to add allure plugin in the azure devops. Further details in https://allurereport.org/docs/integrations-azure/
+
+# Integrating script with Github WorkFlow/Action
+	### YAML file dotnet is added, the test must run on headless mode.
