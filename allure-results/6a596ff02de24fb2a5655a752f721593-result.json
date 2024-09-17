@@ -1,0 +1,103 @@
+{
+  "uuid": "58241583-19e6-49f4-ab51-dad03bc02849",
+  "historyId": "e575a4c008b3fbdbef581b9d8c7e5208",
+  "testCaseId": "7b51a85b744e739ec86d0a66d2fcd80a",
+  "fullName": "PlayWrightSpecFlow/Features/TextBox/TextBox Submit User Details",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "vmAVD-H-P-13"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "SpecFlow"
+    },
+    {
+      "name": "feature",
+      "value": "TextBox"
+    }
+  ],
+  "links": [],
+  "name": "TextBox Submit User Details",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am on the TextBox page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1726536907158,
+      "stop": 1726536908868
+    },
+    {
+      "name": "And  I enter valid detais",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1726536908868,
+      "stop": 1726536931806
+    },
+    {
+      "name": "When  I click Submit",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1726536931807,
+      "stop": 1726536941864
+    },
+    {
+      "name": "Then  form should be submitted",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1726536941865,
+      "stop": 1726536941873
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1726536907158,
+  "stop": 1726536941874
+}
