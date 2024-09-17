@@ -25,15 +25,14 @@ jobs:
       run: dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory test-results
       continue-on-error: true
 
-    - name: Install ReportGenerator
-      run: dotnet tool install -g dotnet-reportgenerator-globaltool
-
     - name: Generate HTML report
       run: reportgenerator -reports:test-results/test-results.trx -targetdir:report -reporttypes:Html
 
-    - name: Upload main HTML report
-      if: always()
+    - name: Upload test results and reports
+      if: always() # Ensures this step runs even if tests fail
       uses: actions/upload-artifact@v3
       with:
-        name: html-report
-        path: report/index.html
+        name: test-results
+        path: |
+          test-results/test-results.trx
+          report/
