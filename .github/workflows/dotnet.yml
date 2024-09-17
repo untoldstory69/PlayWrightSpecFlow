@@ -29,7 +29,7 @@ jobs:
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
     - name: Generate HTML report
-      run: reportgenerator -reports:test-results/test-results.trx -targetdir:report -reporttypes:Html;HtmlSummary
+      run: reportgenerator -reports:test-results/test-results.trx -targetdir:report -reporttypes:Html
 
     - name: Upload main HTML report
       if: always()
