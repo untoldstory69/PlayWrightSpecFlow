@@ -36,15 +36,16 @@ jobs:
     - name: Install Allure CLI
       run: npm install -g allure-commandline --save-dev
 
-    # Ensure that old test results are cleaned up
+    # Ensure that old Allure results are cleaned up
     - name: Clean Allure results
       run: rm -rf allure-results
 
-    # Copy the test results to the Allure results folder
-    - name: Copy test results for Allure
+    # Copy the test results and screenshots to the Allure results folder
+    - name: Copy test results and screenshots for Allure
       run: |
         mkdir -p allure-results
         cp test-results/*.trx allure-results/
+        cp -r screenShot/* allure-results/  # Copy screenshots to allure-results folder
 
     - name: Generate Allure report
       run: |
@@ -57,7 +58,7 @@ jobs:
         name: allure-report
         path: allure-report
 
-     # Upload screenshots taken during failed steps
+    # Upload screenshots taken during failed steps
     - name: Upload screenshots
       if: always()
       uses: actions/upload-artifact@v3
