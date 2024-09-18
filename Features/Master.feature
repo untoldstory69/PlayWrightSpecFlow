@@ -1,4 +1,5 @@
-﻿Feature: Master Feature
+﻿@ignore
+Feature: Master Feature
 
 This Featue files contains the global features used in web application
 

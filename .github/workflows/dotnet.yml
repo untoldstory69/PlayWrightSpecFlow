@@ -1,6 +1,16 @@
 name: Playwright Tests
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select environment to run tests'
+        required: true
+        default: 'SIT'
+        type: choice
+        options:
+          - SIT
+          - UAT
   push:
     branches:
       - main
@@ -29,8 +39,11 @@ jobs:
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net6.0/playwright.ps1 install --with-deps
 
-    - name: Run tests
-      run: dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory test-results
+    - name: Run tests for ${{ github.event.inputs.environment }} environment
+      env:
+        TEST_ENV: ${{ github.event.inputs.environment }}
+        TEST_URL: ${{ github.event.inputs.environment == 'SIT' && 'https://demoqa.com' || 'https://UAT-demoqa.com' }} # Set the URL based on the environment
+      run: dotnet test --filter "Category=${{ github.event.inputs.environment }}"
       continue-on-error: true
 
     - name: Install Allure CLI

@@ -8,6 +8,7 @@ namespace PlayWrightSpecFlow
 {
     internal class GlobalVariables
     {
-        public static string baseURL = "https://demoqa.com/";
+        // public static string baseURL = "https://demoqa.com/";
+        public static string baseURL = Environment.GetEnvironmentVariable("TEST_URL");
     }
 }
