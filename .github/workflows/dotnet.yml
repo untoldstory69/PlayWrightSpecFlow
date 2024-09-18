@@ -55,6 +55,14 @@ jobs:
       run: |
         rm -rf allure-results
         rm -rf allure-report
+
+    # Capture failed screenshots as artifacts
+    - name: Upload failed screenshots
+      if: failure()
+      uses: actions/upload-artifact@v3
+      with:
+        name: failed-screenshots
+        path: bin/Debug/net6.0/screenshots # Adjust this path based on where screenshots are stored
         
     - name: Generate Allure report
       run: |
