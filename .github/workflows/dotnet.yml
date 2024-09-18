@@ -42,19 +42,29 @@ jobs:
     - name: Run tests for ${{ github.event.inputs.environment }} environment
       env:
         TEST_ENV: ${{ github.event.inputs.environment }}
-        TEST_URL: ${{ github.event.inputs.environment == 'SIT' && 'https://demoqa.com' || 'https://UAT-demoqa.com' }} # Set the URL based on the environment
-      run: dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory test-results --filter "Category=${{ github.event.inputs.environment }}"
+        TEST_URL: ${{ github.event.inputs.environment == 'SIT' && 'https://demoqa.com' || 'https://UAT-demoqa.com' }}  # Set the URL based on the environment
+      run: |
+        dotnet test --filter "Category=${{ github.event.inputs.environment }}" \
+          --logger "trx;LogFileName=test-results.trx" \
+          --results-directory test-results \
+          --collect:"Xplat Code Coverage"
       continue-on-error: true
 
     - name: Install Allure CLI
       run: |
         npm install -g allure-commandline --save-dev
         
-# Remove both old allure-results and allure-report to ensure we're generating fresh results
+    # Clean old Allure results and reports
     - name: Clean Allure results and report
       run: |
         rm -rf allure-results
         rm -rf allure-report
+
+    # Convert TRX to Allure results (if needed)
+    - name: Convert TRX to Allure format
+      run: |
+        dotnet tool install -g trx2junit
+        trx2junit test-results/test-results.trx --output test-results/results.xml
 
     # Capture failed screenshots as artifacts
     - name: Upload failed screenshots
@@ -63,10 +73,11 @@ jobs:
       with:
         name: failed-screenshots
         path: bin/Debug/net6.0/screenshots # Adjust this path based on where screenshots are stored
-        
+
+    # Generate Allure report
     - name: Generate Allure report
       run: |
-        allure generate test-results --single-file --clean -o allure-report
+        allure generate test-results --clean -o allure-report
 
     - name: Upload Allure report
       if: always()
